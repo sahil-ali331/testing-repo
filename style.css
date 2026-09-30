@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
 }
+body{
+  /* background-color: #99582a; */
+}
 nav{
   background-color: #432818;
   height: 3vh;
-  width: 100%;
   color: #ffe6a7;
   display: flex;
   justify-content: space-around;
@@ -45,4 +47,9 @@ a{
 img{
   height: 1.5rem;
   width: 3rem;
+}
+#hero{
+  height: 90vh;
+  width: 100%;
+  background-color: #99582a;
 }
