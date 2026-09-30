@@ -13,7 +13,7 @@ nav{
   justify-content: space-around;
   align-items: center;
   padding: 1rem;
-  border-bottom: 2px solid #ffe6a7;
+  border-bottom: 2px solid #fcf6ba;
 }
 #logo{
   background-color: #ffe6a7;
@@ -52,4 +52,9 @@ img{
   height: 90vh;
   width: 100%;
   background-color: #99582a;
+}
+footer{
+  background-color: #432818;
+  height: 50vh;
+  width: 100%;
 }
