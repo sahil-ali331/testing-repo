@@ -3,43 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GSAP Card Gallery</title>
-    
-    <link rel="stylesheet" href="./style.css">
-
-    <!-- 1. GSAP Core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <!-- 2. ScrollTrigger Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <!-- 3. Draggable Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
-
-    <!-- 4. Your custom script with 'defer' so it runs after HTML loads -->
-    <script src="./script.js" defer></script>
+    <title>Bakerz Bite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-<div class="gallery">
-    <ul class="cards">
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-01.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-02.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-03.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-04.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-05.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-06.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-07.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-01.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-02.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-03.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-04.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-05.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-06.png)"></li>
-        <li style="background-image: url(https://assets.codepen.io/16327/portrait-number-07.png)"></li>    
-    </ul>
-    
-</div>
-
-<div class="drag-proxy"></div>
-
+    <header>
+        <nav>
+            <!-- For logo -->
+            <div id="logo">Bakerz Bite</div>
+            <!-- For navigation links -->
+            <div id="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            <!-- For search bar and icon -->
+            <div id="icons">
+                <img src="./cart-shopping-solid-full.svg" alt="Add to cart Icon">
+            </div>
+        </nav>
+    </header>
 </body>
 </html>
