@@ -1,821 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <title>Bakerz Bite</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <script src="./assets/js/bootstrap.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    
-        <div class="menue">
-            <h1>MENUE</h1>
-        </div>
 
-        <section>
-            <div class="yummy">
-                <div class="heading">
-                    <h1>CROSSIANT</h1>
-                    <p>Freshly baked with love ❤️</p>
-                </div>
 
-                <img class="burst-img" src="./assets/images/crossiant1.jfif">
-            </div>
-
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Our Special Treats</h2>
-                    <p>Delicious treats made fresh for every celebration</p>
-                </div>
-
-
-                <div class="products">
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img.jfif">
-
-                        <div class="card-content">
-
-                            <h3>CLASSIC CROSSIANT</h3>
-
-                            <p class="description">Flacky , buttery layers of golden pastry that pair perfectly with
-                                coffee</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">RS. 300</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img2.jfif">
-                        <div class="card-content">
-
-                            <h3>CHOCOLATE CROSSIANT</h3>
-                            <p class="description">Crispy layers filled with rich , melted chocolate sticks inside.</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 400</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img3.jfif">
-
-                        <div class="card-content">
-
-                            <h3>ALMOND CROSSIANT</h3>
-
-                            <p class="description">Filled with sweet almond paste and topped with crunchy sliced almonds
-                            </p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 450</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img4.jfif">
-
-                        <div class="card-content">
-
-                            <h3>CHEESE CROSSIANT</h3>
-
-                            <p class="description">Savory pastry baked with melted cheese inside and on top</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 400</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="yummy">
-                <div class="heading">
-                    <h1>PASTRIES</h1>
-                    <p>Freshly baked with love ❤️</p>
-                </div>
-
-                <img class="burst-img" src="images/pastries1.1.jfif">
-            </div>
-
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Our Special Treats</h2>
-                    <p>Delicious treats made fresh for every celebration</p>
-                </div>
-
-
-                <div class="products">
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img5.1.jfif">
-
-                        <div class="card-content">
-
-                            <h3>PINEAPPLE PASTRY </h3>
-
-                            <p class="description">Soft vanilla cake with cream and light pineapples chunks </p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">RS. 250</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img6.jfif">
-                        <div class="card-content">
-
-                            <h3>CHOCOLATE FUDGE PASTRY</h3>
-                            <p class="description">Rich chocolate sponge layered with thick fudge frosting.</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 300</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img7.2.jfif">
-
-                        <div class="card-content">
-
-                            <h3>BLACK FOREST PASTRY</h3>
-
-                            <p class="description">Chocolate cake with white cream and cherries combination</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 250</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img8.2.jfif">
-
-                        <div class="card-content">
-
-                            <h3>THREE MILK PASTRY</h3>
-
-                            <p class="description">Super soft pastry soaked in three types of milk</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 350</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="yummy">
-                <div class="heading">
-                    <h1>COOKIES</h1>
-                    <p>Freshly baked with love ❤️</p>
-                </div>
-
-                <img class="burst-img" src="images/cookies1.2.jfif">
-            </div>
-
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Our Special Treats</h2>
-                    <p>Delicious treats made fresh for every celebration</p>
-                </div>
-
-
-                <div class="products">
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img9.jfif">
-
-                        <div class="card-content">
-
-                            <h3>CHOCOLATE CHIP COOKIES </h3>
-
-                            <p class="description">Classic soft cookies packed with sweet chocolate chips</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">RS. 100</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img10.2.jfif">
-                        <div class="card-content">
-
-                            <h3>LAYERS COOKIE</h3>
-                            <p class="description">Fresh , soft and premium chocolate cookie</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 150</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img11.1.jfif">
-
-                        <div class="card-content">
-
-                            <h3>CATBURY COOKIE</h3>
-
-                            <p class="description">Crunchy biscuit filled with soft catbury chocolate inside</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 200</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img12.jfif">
-
-                        <div class="card-content">
-
-                            <h3>CHOCOLATTO</h3>
-
-                            <p class="description">Rich biscuit with a smooth chocolate cream center</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 350</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="yummy">
-                <div class="heading">
-                    <h1>SWEETS</h1>
-                    <p>Freshly baked with love ❤️</p>
-                </div>
-
-                <img class="burst-img" src="images/sweets.jfif">
-            </div>
-
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Our Special Treats</h2>
-                    <p>Delicious treats made fresh for every celebration</p>
-                </div>
-
-
-                <div class="products">
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img13.jfif">
-
-                        <div class="card-content">
-
-                            <h3>CHEESECAKE </h3>
-
-                            <p class="description">A famous American dessert with a thick , creamy cheese layer on a
-                                crunchy biscuit crunch</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">RS. 450</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img14.jfif">
-                        <div class="card-content">
-
-                            <h3>MACARON</h3>
-                            <p class="description">A delicate french sweet made of colorful , meringue-based almond
-                                cookies </p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 200</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img15.jfif">
-
-                        <div class="card-content">
-
-                            <h3>CHURRO</h3>
-
-                            <p class="description">A popular spanish street sweet consisting of fried dough pastry
-                                dusted with sugar ...</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 350</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-
-                        <img class="card-img" src="images/img16.1.jfif">
-
-                        <div class="card-content">
-
-                            <h3>ECLAIR</h3>
-
-                            <p class="description">An iconic french pastry oblong in shape , filled with rich custurd
-                                cream and topped with chocolate glaze</p>
-
-                            <div class="bottom">
-
-                                <div>
-                                    <div class="price">Rs. 450</div>
-
-                                    <div class="quantity">
-                                        <button onclick="decrease(this)">-</button>
-                                        <span>1</span>
-                                        <button onclick="increase(this)">+</button>
-                                    </div>
-                                </div>
-                                <button class="cart-btn" onclick="addCart()">
-                                    🛒 Add to Cart
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <div class="about">
-            <h1>ABOUT US</h1>
-        </div>
-
-        <section class="about-page">
-            <div class="about-hero">
-                <div class="about-text">
-                    <p class="small-title">ABOUT OUR BAKERY</p>
-                    <h1>We bake happiness<br>
-                        <span>Every single day</span>
-                    </h1>
-                    <p class="intro">
-                        Welcome to Sweet Bite Bakery, where fresh ingredients,delicious flavours and a little bit of
-                        love come together.From everyday treats to special celebrations, we makeevery bite worth
-                        remembering.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/bakery shop 1.jfif">
-                    <div class="experience">
-                        <h2>5+</h2>
-                        <p>Years of<br>Freshness</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="story">
-
-                <div class="story-image">
-                    <img src="images/bakery shop 2.jfif">
-                </div>
-
-                <div class="story-content">
-                    <p class="small-title">OUR STORY</p>
-
-                    <h2>A Little Bakery<br>
-                        With a <span>Big Dream.</span>
-                    </h2>
-
-                    <p>
-                        What started as a small passion for baking slowly became
-                        something much bigger. At Sweet Bite Bakery, we believe
-                        that good food brings people together.
-                    </p>
-
-                    <p>
-                        We prepare our cakes, pastries, cookies and breads with
-                        fresh ingredients and careful attention. Every product
-                        that leaves our bakery is made with the same care we
-                        would give to our own family.
-                    </p>
-
-                    <div class="story-points">
-                        <div>
-                            <span>✓</span>
-                            <p>Fresh Ingredients</p>
-                        </div>
-
-                        <div>
-                            <span>✓</span>
-                            <p>Made With Care</p>
-                        </div>
-
-                        <div>
-                            <span>✓</span>
-                            <p>Great Taste</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="values">
-
-                <div class="section-heading">
-                    <p class="small-title">WHY CHOOSE US</p>
-                    <h2>Made Fresh. Made With <span>Love.</span></h2>
-                    <p>
-                        We keep things simple — fresh ingredients, good taste
-                        and happy customers.
-                    </p>
-                </div>
-
-                <div class="value-cards">
-
-                    <div class="value-card">
-                        <div class="icon">🍞</div>
-                        <h3>Fresh Every Day</h3>
-                        <p>
-                            Our bakery items are prepared fresh so you can
-                            enjoy their real taste and softness.
-                        </p>
-                    </div>
-
-                    <div class="value-card">
-                        <div class="icon">❤️</div>
-                        <h3>Baked With Love</h3>
-                        <p>
-                            We put care and attention into every cake,
-                            cookie and pastry we prepare.
-                        </p>
-                    </div>
-
-                    <div class="value-card">
-                        <div class="icon">🎂</div>
-                        <h3>Made For You</h3>
-                        <p>
-                            From small treats to special occasions, we have
-                            something for every sweet moment.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-            <div class="numbers">
-
-                <div class="number-box">
-                    <h2>5000+</h2>
-                    <p>Happy Customers</p>
-                </div>
-
-                <div class="number-box">
-                    <h2>25+</h2>
-                    <p>Bakery Items</p>
-                </div>
-
-                <div class="number-box">
-                    <h2>5+</h2>
-                    <p>Years Experience</p>
-                </div>
-
-                <div class="number-box">
-                    <h2>100%</h2>
-                    <p>Freshness</p>
-                </div>
-
-            </div>
-
-
-
-            <div class="about-bottom">
-
-                <div>
-                    <p class="small-title">A SWEET MOMENT AWAITS</p>
-
-                    <h2>
-                        Life is better with<br>
-                        <span>something sweet.</span>
-                    </h2>
-
-                    <p>
-                        Visit our menu and discover your next favourite treat.
-                    </p>
-                </div>
-
-                <a class="about-btn">Thank you for having us</a>
-
-            </div>
-        </section>
-
-        <div class="service">
-            <h1>SERVICES</h1>
-        </div>
-
-    </main>
-
-
-    <header class="sticky-top">
+    <header>
         <nav class="navbar navbar-expand-lg custom-navbar py-2">
             <div class="container">
 
@@ -851,7 +51,7 @@
                     </ul>
 
                     <div id="icons" class="d-flex align-items-center justify-content-center">
-                        <a href="#" class="cart-btn d-flex align-items-center text-decoration-none">
+                        <a href="#" class="navbar-cart-btn d-flex align-items-center text-decoration-none">
                             <img src="./assets/images/cart-shopping-solid-full.svg" alt="Cart Icon"
                                 class="icon-img me-2">
                             <span class="fw-bold">Cart</span>
@@ -863,32 +63,844 @@
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
-                        <img class="d-block w-100 hero-img" src="./assets/images/Arch Shae (2).png" alt="Croissant" />
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img class="d-block w-100 hero-img" src="./assets/images/Croissants.png" alt="Croissants" />
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img class="d-block w-100 hero-img" src="./assets/images/Croissants.png" alt="Cupcake" />
+    <section id="hero">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img class="d-block w-100 hero-img" src="./assets/images/Arch Shae (2).png" alt="Croissant" />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img class="d-block w-100 hero-img" src="./assets/images/Arch Shae.png" alt="Croissants" />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img class="d-block w-100 hero-img" src="./assets/images/Arch Shae (3).png" alt="Cupcake" />
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- mara kammm -->
+
+    <div class="menue">
+        <h1>MENUE</h1>
+    </div>
+
+    <section>
+        <div class="yummy">
+            <div class="heading">
+                <h1>CROSSIANT</h1>
+                <p>Freshly baked with love ❤️</p>
+            </div>
+
+            <img class="burst-img" src="./assets/images/crossiant1.jfif">
+        </div>
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Our Special Treats</h2>
+                <p>Delicious treats made fresh for every celebration</p>
+            </div>
+
+            <div class="products">
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CLASSIC CROSSIANT</h3>
+
+                        <p class="description">Flacky , buttery layers of golden pastry that pair perfectly with
+                            coffee</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">RS. 300</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
                     </div>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img2.jfif">
+                    <div class="card-content">
+
+                        <h3>CHOCOLATE CROSSIANT</h3>
+                        <p class="description">Crispy layers filled with rich , melted chocolate sticks inside.</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 400</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img3.jfif">
+
+                    <div class="card-content">
+
+                        <h3>ALMOND CROSSIANT</h3>
+
+                        <p class="description">Filled with sweet almond paste and topped with crunchy sliced almonds
+                        </p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 450</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img4.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CHEESE CROSSIANT</h3>
+
+                        <p class="description">Savory pastry baked with melted cheese inside and on top</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 400</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-        </section>
-    </main>
+
+        </div>
+
+        <div class="yummy">
+            <div class="heading">
+                <h1>PASTRIES</h1>
+                <p>Freshly baked with love ❤️</p>
+            </div>
+
+            <img class="burst-img" src="assets/images/pastries1.1.jfif">
+        </div>
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Our Special Treats</h2>
+                <p>Delicious treats made fresh for every celebration</p>
+            </div>
+
+
+            <div class="products">
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img5.1.jfif">
+
+                    <div class="card-content">
+
+                        <h3>PINEAPPLE PASTRY </h3>
+
+                        <p class="description">Soft vanilla cake with cream and light pineapples chunks </p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">RS. 250</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img6.jfif">
+                    <div class="card-content">
+
+                        <h3>CHOCOLATE FUDGE PASTRY</h3>
+                        <p class="description">Rich chocolate sponge layered with thick fudge frosting.</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 300</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img7.2.jfif">
+
+                    <div class="card-content">
+
+                        <h3>BLACK FOREST PASTRY</h3>
+
+                        <p class="description">Chocolate cake with white cream and cherries combination</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 250</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img8.2.jfif">
+
+                    <div class="card-content">
+
+                        <h3>THREE MILK PASTRY</h3>
+
+                        <p class="description">Super soft pastry soaked in three types of milk</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 350</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="yummy">
+            <div class="heading">
+                <h1>COOKIES</h1>
+                <p>Freshly baked with love ❤️</p>
+            </div>
+
+            <img class="burst-img" src="assets/images/cookies1.2.jfif">
+        </div>
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Our Special Treats</h2>
+                <p>Delicious treats made fresh for every celebration</p>
+            </div>
+
+
+            <div class="products">
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img9.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CHOCOLATE CHIP COOKIES </h3>
+
+                        <p class="description">Classic soft cookies packed with sweet chocolate chips</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">RS. 100</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img10.2.jfif">
+                    <div class="card-content">
+
+                        <h3>LAYERS COOKIE</h3>
+                        <p class="description">Fresh , soft and premium chocolate cookie</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 150</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img11.1.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CATBURY COOKIE</h3>
+
+                        <p class="description">Crunchy biscuit filled with soft catbury chocolate inside</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 200</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img12.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CHOCOLATTO</h3>
+
+                        <p class="description">Rich biscuit with a smooth chocolate cream center</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 350</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="yummy">
+            <div class="heading">
+                <h1>SWEETS</h1>
+                <p>Freshly baked with love ❤️</p>
+            </div>
+
+            <img class="burst-img" src="assets/images/sweets.jfif">
+        </div>
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Our Special Treats</h2>
+                <p>Delicious treats made fresh for every celebration</p>
+            </div>
+
+
+            <div class="products">
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img13.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CHEESECAKE </h3>
+
+                        <p class="description">A famous American dessert with a thick , creamy cheese layer on a
+                            crunchy biscuit crunch</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">RS. 450</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img14.jfif">
+                    <div class="card-content">
+
+                        <h3>MACARON</h3>
+                        <p class="description">A delicate french sweet made of colorful , meringue-based almond
+                            cookies </p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 200</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img15.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CHURRO</h3>
+
+                        <p class="description">A popular spanish street sweet consisting of fried dough pastry
+                            dusted with sugar ...</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 350</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img16.1.jfif">
+
+                    <div class="card-content">
+
+                        <h3>ECLAIR</h3>
+
+                        <p class="description">An iconic french pastry oblong in shape , filled with rich custurd
+                            cream and topped with chocolate glaze</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 450</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class="about">
+        <h1>ABOUT US</h1>
+    </div>
+
+    <section class="about-page">
+        <div class="about-hero">
+            <div class="about-text">
+                <p class="small-title">ABOUT OUR BAKERY</p>
+                <h1>We bake happiness<br>
+                    <span>Every single day</span>
+                </h1>
+                <p class="intro">
+                    Welcome to Sweet Bite Bakery, where fresh ingredients,delicious flavours and a little bit of
+                    love come together.From everyday treats to special celebrations, we makeevery bite worth
+                    remembering.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/bakery shop 1.jfif">
+                <div class="experience">
+                    <h2>5+</h2>
+                    <p>Years of<br>Freshness</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="story">
+
+            <div class="story-image">
+                <img src="assets/images/bakery shop 2.jfif">
+            </div>
+
+            <div class="story-content">
+                <p class="small-title">OUR STORY</p>
+
+                <h2>A Little Bakery<br>
+                    With a <span>Big Dream.</span>
+                </h2>
+
+                <p>
+                    What started as a small passion for baking slowly became
+                    something much bigger. At Sweet Bite Bakery, we believe
+                    that good food brings people together.
+                </p>
+
+                <p>
+                    We prepare our cakes, pastries, cookies and breads with
+                    fresh ingredients and careful attention. Every product
+                    that leaves our bakery is made with the same care we
+                    would give to our own family.
+                </p>
+
+                <div class="story-points">
+                    <div>
+                        <span>✓</span>
+                        <p>Fresh Ingredients</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Made With Care</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Great Taste</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="values">
+
+            <div class="section-heading">
+                <p class="small-title">WHY CHOOSE US</p>
+                <h2>Made Fresh. Made With <span>Love.</span></h2>
+                <p>
+                    We keep things simple — fresh ingredients, good taste
+                    and happy customers.
+                </p>
+            </div>
+
+            <div class="value-cards">
+
+                <div class="value-card">
+                    <div class="value-icon">🍞</div>
+                    <h3>Fresh Every Day</h3>
+                    <p>
+                        Our bakery items are prepared fresh so you can
+                        enjoy their real taste and softness.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h3>Baked With Love</h3>
+                    <p>
+                        We put care and attention into every cake,
+                        cookie and pastry we prepare.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🎂</div>
+                    <h3>Made For You</h3>
+                    <p>
+                        From small treats to special occasions, we have
+                        something for every sweet moment.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="numbers">
+
+            <div class="number-box">
+                <h2>5000+</h2>
+                <p>Happy Customers</p>
+            </div>
+
+            <div class="number-box">
+                <h2>25+</h2>
+                <p>Bakery Items</p>
+            </div>
+
+            <div class="number-box">
+                <h2>5+</h2>
+                <p>Years Experience</p>
+            </div>
+
+            <div class="number-box">
+                <h2>100%</h2>
+                <p>Freshness</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="about-bottom">
+
+            <div>
+                <p class="small-title">A SWEET MOMENT AWAITS</p>
+
+                <h2>
+                    Life is better with<br>
+                    <span>something sweet.</span>
+                </h2>
+
+                <p>
+                    Visit our menu and discover your next favourite treat.
+                </p>
+            </div>
+
+            <a class="about-btn">Thank you for having us</a>
+
+        </div>
+    </section>
+
+    <div class="service">
+        <h1>SERVICES</h1>
+    </div>
+
+
+
+
 
     <footer class="py-4">
         <div class="container">
@@ -906,5 +918,5 @@
         </div>
     </footer>
 </body>
+
 </html>
-    
