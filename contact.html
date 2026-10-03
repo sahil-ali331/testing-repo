@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bakerz Bite</title>
+    <style>
+        
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden; 
+            background-color: #faf6f0;
+            color: #351b18;
+        }
+
+        .bbcnt-tophead-banner {
+            background-color: #99582a;
+            color: #ffe6a7;
+            padding: 40px 15px;
+            text-align: center;
+            border-bottom: 2px solid #432818;
+            width: 100%;
+        }
+
+        .bbcnt-toptitle-txt {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            margin: 0;
+            letter-spacing: 2px;
+            color: #ffe6a7;
+            font-weight: bold;
+            word-wrap: break-word;
+        }
+
+        .bbcnt-topsubhead-txt {
+            margin: 8px 0 0 0;
+            color: #faf6f0;
+            font-size: 16px;
+        }
+
+        .bbcnt-main-wrapper {
+            background-color: #faf6f0;
+            padding: 50px 15px;
+            width: 100%;
+        }
+
+        .bbcnt-outer-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .bbcnt-grid-holder {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        .bbcnt-info-box-left {
+            flex: 1 1 350px;
+            max-width: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 35px 25px;
+            border: 1px solid #eadbca;
+            box-shadow: 0 10px 25px rgba(67, 40, 24, 0.05);
+        }
+
+        .bbcnt-small-tag {
+            color: #b87935;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2.5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .bbcnt-info-heading {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            color: #3b2418;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+
+        .bbcnt-info-heading span {
+            color: #c88438;
+            font-style: italic;
+        }
+
+        .bbcnt-info-desc {
+            color: #6d5a4e;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .bbcnt-detail-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .bbcnt-symbol-circle {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background-color: #fff0d9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .bbcnt-detail-content {
+            display: flex;
+            flex-direction: column;
+            overflow-wrap: anywhere;
+        }
+
+        .bbcnt-label-text {
+            font-weight: bold;
+            font-size: 15px;
+            color: #3b2418;
+            margin: 0 0 3px 0;
+        }
+
+        .bbcnt-val-text {
+            color: #6d5a4e;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .bbcnt-form-box-right {
+            flex: 1 1 450px;
+            max-width: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 35px 25px;
+            border: 1px solid #eadbca;
+            box-shadow: 0 10px 25px rgba(67, 40, 24, 0.05);
+        }
+
+        .bbcnt-form-title {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            color: #3b2418;
+            margin: 0 0 20px 0;
+        }
+
+        .bbcnt-form-body {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 100%;
+        }
+
+        .bbcnt-inputs-flex {
+            display: flex;
+            gap: 18px;
+            width: 100%;
+        }
+
+        .bbcnt-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .bbcnt-field-lbl {
+            font-size: 14px;
+            font-weight: bold;
+            color: #3b2418;
+        }
+
+        .bbcnt-input-field {
+            width: 100%;
+            background-color: #faf6f0;
+            border: 1px solid #eadbca;
+            padding: 12px 15px;
+            border-radius: 12px;
+            color: #3b2418;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .bbcnt-input-field:focus {
+            background-color: #ffffff;
+            border-color: #99582a;
+            box-shadow: 0 0 0 3px rgba(153, 88, 42, 0.15);
+        }
+
+        .bbcnt-textarea-field {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .bbcnt-submit-btn {
+            background-color: #4b2c20;
+            color: #ffe6a7;
+            border: none;
+            border-radius: 30px;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .bbcnt-submit-btn:hover {
+            background-color: #99582a;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(153, 88, 42, 0.25);
+        }
+
+        .bbcnt-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(53, 27, 24, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 15px;
+        }
+
+        .bbcnt-popup-overlay.bbcnt-popup-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .bbcnt-popup-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            border: 2px solid #99582a;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .bbcnt-popup-overlay.bbcnt-popup-active .bbcnt-popup-card {
+            transform: scale(1);
+        }
+
+        .bbcnt-popup-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #fff0d9;
+            color: #99582a;
+            font-size: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+        }
+
+        .bbcnt-popup-title {
+            font-family: Georgia, serif;
+            color: #3b2418;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .bbcnt-popup-msg {
+            color: #6d5a4e;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .bbcnt-popup-close-btn {
+            background-color: #4b2c20;
+            color: #ffe6a7;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .bbcnt-popup-close-btn:hover {
+            background-color: #99582a;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .bbcnt-inputs-flex {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .bbcnt-toptitle-txt {
+                font-size: 30px;
+            }
+
+            .bbcnt-info-heading {
+                font-size: 26px;
+            }
+
+            .bbcnt-form-title {
+                font-size: 24px;
+            }
+
+            .bbcnt-info-box-left,
+            .bbcnt-form-box-right {
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bbcnt-tophead-banner">
+        <h1 class="bbcnt-toptitle-txt">CONTACT US</h1>
+        <p class="bbcnt-topsubhead-txt">We'd love to hear from you!</p>
+    </div>
+
+    <section class="bbcnt-main-wrapper">
+    <div class="bbcnt-outer-container">
+    <div class="bbcnt-grid-holder">
+                
+    <div class="bbcnt-info-box-left">
+    <span class="bbcnt-small-tag">GET IN TOUCH</span>
+    <h2 class="bbcnt-info-heading">Visit Us Or <span>Say Hello</span></h2>
+    <p class="bbcnt-info-desc">Have a question about our baked treats or custom orders? Drop us a message or call us directly.</p>
+
+    <div class="bbcnt-detail-row">
+    <div class="bbcnt-symbol-circle">📍</div>
+    <div class="bbcnt-detail-content">
+    <p class="bbcnt-label-text">Our Location</p>
+    <p class="bbcnt-val-text">Aptech Learning Garden Center, Karachi</p>
+    </div>
+    </div>
+
+    <div class="bbcnt-detail-row">
+    <div class="bbcnt-symbol-circle">📞</div>
+    <div class="bbcnt-detail-content">
+    <p class="bbcnt-label-text">Phone Number</p>
+    <p class="bbcnt-val-text">+92 300 1234567</p>
+    </div>
+    </div>
+
+    <div class="bbcnt-detail-row">
+    <div class="bbcnt-symbol-circle">✉️</div>
+    <div class="bbcnt-detail-content">
+    <p class="bbcnt-label-text">Email Address</p>
+    <p class="bbcnt-val-text">info@bakerzbite.com</p>
+    </div>
+    </div>
+
+    <div class="bbcnt-detail-row">
+    <div class="bbcnt-symbol-circle">⏰</div>
+    <div class="bbcnt-detail-content">
+    <p class="bbcnt-label-text">Opening Hours</p>
+    <p class="bbcnt-val-text">Mon - Sun: 8:00 AM - 10:00 PM</p>
+    </div>
+    </div>
+    </div>
+
+    <div class="bbcnt-form-box-right">
+    <h3 class="bbcnt-form-title">Send Us A Message</h3>
+    <form id="bbcntContactForm" class="bbcnt-form-body">
+                        
+    <div class="bbcnt-inputs-flex">
+    <div class="bbcnt-input-group">
+    <label class="bbcnt-field-lbl">Your Name</label>
+    <input type="text" class="bbcnt-input-field" placeholder="Enter your name" required></div>
+
+    <div class="bbcnt-input-group">
+    <label class="bbcnt-field-lbl">Email Address</label>
+    <input type="email" class="bbcnt-input-field" placeholder="Enter your email" required></div>
+    </div>
+
+    <div class="bbcnt-input-group">
+    <label class="bbcnt-field-lbl">Subject</label>
+    <input type="text" class="bbcnt-input-field" placeholder="e.g. Custom Cake Order" required>
+    </div>
+
+    <div class="bbcnt-input-group">
+    <label class="bbcnt-field-lbl">Your Message</label>
+    <textarea class="bbcnt-input-field bbcnt-textarea-field" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <button type="submit" class="bbcnt-submit-btn">Send Message 🚀</button>
+    </form>
+    </div>
+
+     </div>
+    </div>
+    </section>
+
+    
+    <div class="bbcnt-popup-overlay" id="bbcntSuccessPopup">
+    <div class="bbcnt-popup-card">
+    <div class="bbcnt-popup-icon">✓</div>
+    <h4 class="bbcnt-popup-title">Thank You!</h4>
+    <p class="bbcnt-popup-msg">Your message has been sent</p>
+    <button class="bbcnt-popup-close-btn" id="bbcntClosePopup">Close<button>
+    </div>
+    </div>
+
+    <script>
+        const contactForm = document.getElementById('bbcntContactForm');
+        const popupOverlay = document.getElementById('bbcntSuccessPopup');
+        const closeBtn = document.getElementById('bbcntClosePopup');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            popupOverlay.classList.add('bbcnt-popup-active'); 
+            contactForm.reset(); 
+        });
+
+        closeBtn.addEventListener('click', function() {
+            popupOverlay.classList.remove('bbcnt-popup-active'); 
+        });
+
+        popupOverlay.addEventListener('click', function(e) {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('bbcnt-popup-active');
+            }
+        });
+    </script>
+
+</body>
+</html>
