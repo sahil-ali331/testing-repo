@@ -6575,6 +6575,7 @@ textarea.form-control-lg {
 
 .w-100 {
   width: 100% !important;
+  /* height: 90vh !important; */
 }
 
 .w-auto {
