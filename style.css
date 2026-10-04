@@ -885,8 +885,9 @@ footer {
   .main2 {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    /* gap: 12px !important; */
     padding: 0 12px !important;
+    margin-bottom: 15rem !important;
   }
 
   .menu-card {
@@ -919,6 +920,57 @@ footer {
   }
 }
 
+/* --- Headings & Badges Responsive Fix --- */
+@media (max-width: 768px) {
+
+  /* Badges (MENUE, ABOUT US, CONTACT US, etc.) */
+  .menue-container,
+  .about-container,
+  .services-container,
+  .contact-container {
+    margin: 15px 0 !important;
+  }
+
+  .menue,
+  .about,
+  .services,
+  .contact {
+    letter-spacing: 0.1rem !important;
+    width: 50% !important;
+    height: 10vh !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+  }
+
+  .menue h1,
+  .about h1,
+  .services h1,
+  .contact h1 {
+    font-size: 1.2rem !important;
+  }
+
+  /* Main Section Headings & Titles */
+  .section-title h2,
+  .about-text h1,
+  .story-content h2,
+  .section-heading h2,
+  .bbcnt-info-heading,
+  .bb-faq-main-heading,
+  .about-bottom h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  /* Subtitles & Descriptions */
+  .section-title p,
+  .bb-faq-header-subtext,
+  .bbcnt-info-desc {
+    font-size: 13px !important;
+  }
+}
 
 .bbcnt-small-tag {
   color: #b87935;
