@@ -779,12 +779,13 @@ footer {
 
 /* contact us */
 
-.contact-container{
+.contact-container {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
-.contact{
+
+.contact {
   background-color: #351b18;
   height: 12vh;
   width: 50%;
@@ -828,6 +829,96 @@ footer {
   border: 1px solid #eadbca;
   box-shadow: 0 10px 25px rgba(67, 40, 24, 0.05);
 }
+
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .product-card-img {
+    height: 125px !important;
+  }
+
+  .card-content {
+    padding: 10px !important;
+  }
+
+  .card-content h3 {
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+  }
+
+  .description {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .bottom {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+  }
+
+  .price {
+    font-size: 14px !important;
+  }
+
+  .quantity button {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 12px !important;
+  }
+
+  .add-cart-btn {
+    width: 100% !important;
+    padding: 6px !important;
+    font-size: 11px !important;
+    text-align: center !important;
+  }
+
+  .main2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 0 12px !important;
+  }
+
+  .menu-card {
+    margin-top: 35px !important;
+    width: 100% !important;
+  }
+
+  .card-image-wrapper2 {
+    width: 65px !important;
+    height: 65px !important;
+    top: -32px !important;
+    border-width: 3px !important;
+  }
+
+  .main2 .card-content {
+    padding: 40px 8px 12px 8px !important;
+  }
+
+  .item-name {
+    font-size: 0.9rem !important;
+  }
+
+  .item-price {
+    font-size: 0.8rem !important;
+  }
+
+  .item-description {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
 
 .bbcnt-small-tag {
   color: #b87935;
@@ -1095,7 +1186,7 @@ footer {
 
 .bb-faq-hero-container {
   /* background: linear-gradient(135deg, #432818 0%, #2b180d 100%); */
-  padding: 75px 20px  ;
+  padding: 75px 20px;
   text-align: center;
   position: relative;
   /* border-bottom: 3px solid #99582a; */
