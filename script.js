@@ -37,3 +37,75 @@ document.querySelectorAll('.bb-faq-trigger-btn').forEach(button => {
 });
 
 // FAQs section end
+
+// 
+
+document.addEventListener("DOMContentLoaded", () => {
+    let visits = localStorage.getItem("bakerz_visitor_count");
+    if (visits === null) {
+        visits = 1;
+    } else {
+        visits = parseInt(visits) + 1;
+    }
+    localStorage.setItem("bakerz_visitor_count", visits);
+    document.getElementById("visitor-count").textContent = visits;
+});
+
+// visit count end
+
+// geolocation start
+
+document.addEventListener("DOMContentLoaded", () => {
+    let locationData = "Detecting location...";
+
+    // 1. Geolocation Access (Latitude, Longitude & City)
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const lat = position.coords.latitude.toFixed(4);
+                const lon = position.coords.longitude.toFixed(4);
+                locationData = `Lat: ${lat}, Lon: ${lon}`;
+
+                // City name ke liye OpenStreetMap Reverse Geocoding
+                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        const city = data.address.city || data.address.town || data.address.village;
+                        if (city) {
+                            locationData = `${city} (${lat}, ${lon})`;
+                        }
+                        updateTicker();
+                    })
+                    .catch(() => updateTicker());
+            },
+            (error) => {
+                locationData = "Location Access Denied";
+                updateTicker();
+            }
+        );
+    } else {
+        locationData = "Geolocation Not Supported";
+        updateTicker();
+    }
+
+    // 2. Continuous Date, Time & Location Text Updater
+    function updateTicker() {
+        const now = new Date();
+        const dateStr = now.toLocaleDateString("en-US", {
+            weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'
+        });
+        const timeStr = now.toLocaleTimeString("en-US", {
+            hour: '2-digit', minute: '2-digit', second: '2-digit'
+        });
+
+        const tickerText = `📍 Location: ${locationData} | 📅 Date: ${dateStr} | 🕒 Time: ${timeStr} | 🧁 Welcome to Bakerz Bite — Where smiles are served daily!`;
+
+        document.getElementById("continuous-ticker").textContent = tickerText;
+    }
+
+    // Har 1 second mein time update hoga
+    setInterval(updateTicker, 1000);
+    updateTicker();
+});
+
+// geolocation end
