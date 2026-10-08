@@ -12,8 +12,9 @@
     <script src="script.js" defer></script>
 
 </head>
+
 <body>
-    <header id="Home"> 
+    <header>
         <nav class="navbar navbar-expand-lg custom-navbar py-2">
             <div class="container">
 
@@ -35,10 +36,10 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav mx-auto mb-3 mb-lg-0 py-2 py-lg-0" id="nav-links">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#Home">Home</a>
+                            <a class="nav-link active" href="hero">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#MENU">Menue</a>
+                            <a class="nav-link" href="#">Menue</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
@@ -96,41 +97,158 @@
         </div>
     </section>
 
+    <section>
+        <div class="menue-container">
+        <div class="menue">MOST POPULAR ITEMS</div>
+        <p>Most selling items from our Bakery</p>
+    </div>
 
+<div class="container">
 
-    <nav class="sticky-top bakerz-filter-nav py-3 px-2">
-  <div class="container-fluid">
-    <ul class="nav nav-pills flex-nowrap overflow-auto gap-2 filter-container justify-content-start justify-content-md-center" style="scrollbar-width: none;">
-      <li class="nav-item">
-        <button class="nav-link filter-btn active text-nowrap" onclick="scrollToSection('pastries', this)">🥐 Pastries</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link filter-btn text-nowrap" onclick="scrollToSection('crossiants', this)">🌙 Croissants</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link filter-btn text-nowrap" onclick="scrollToSection('cakes', this)">🎂 Cakes</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link filter-btn text-nowrap" onclick="scrollToSection('brownies', this)">merch</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link filter-btn text-nowrap" onclick="scrollToSection('cookies', this)">🍪 Cookies</button>
-      </li>
-    </ul>
-  </div>
-</nav>
+            <div class="products">
 
+                <div class="product-card">
+                    <img class="product-card-img" src="./assets/images/Butter Croissant.jpg">
+                    <div class="card-content">
+                        <h3>Butter Croissant</h3>
+                        <p class="description">The classic golden-brown crescent made with laminated yeast dough and
+                            pure butter</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">RS. 500</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-    <section id="MENU">
+                <div class="product-card">
+                    <img class="product-card-img" src="./assets/images/Fruit & Custard Croissants.jpg">
+                    <div class="card-content">
+                        <h3>CLASSIC Fruit & Custard Croissants</h3>
+                        <p class="description">Filled with vanilla pastry cream, pistachio paste, Nutella, or fruit
+                            preserves (such as raspberry, apricot, or lemon curd).</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">RS. 450</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-         <div class="menue-container">
+                <div class="product-card">
+                    <img class="product-card-img" src="./assets/images/Fruit & Ganache Tarts.jpg">
+                    <div class="card-content">
+                        <h3>Fruit & Ganache Tarts</h3>
+                        <p class="description">Crisp shortbread crusts (pâte sucrée) filled with rich chocolate ganache or fresh</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">RS. 900</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="./assets/images/Molten Center Stuffed.jpg">
+                    <div class="card-content">
+                        <h3>Molten Center Stuffed</h3>
+                        <p class="description">Chunky, NYC-style cookies stuffed with Nutella, caramel, or cookie butter.</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">Rs. 250</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/img14.jfif">
+                    <div class="card-content">
+                        <h3>MACARON</h3>
+                        <p class="description">A delicate french sweet made of colorful , meringue-based almond cookies</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">Rs. 200</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/apple pie 1.jfif">
+                    <div class="card-content">
+                        <h3>APPLE PIE</h3>
+                        <p class="description">A sweet , spiced baked dessert wrapped in a flacky crust</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">Rs. 600</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="menue-container">
         <div class="menue">MENU & SPECIALS</div>
         <p>Handcrafted with Love, Baked Fresh Every Day</p>
     </div>
 
-
+    <section>
         <!-- CROSSIANTS section -->
-          <section id="crossiants">
         <div class="container">
 
             <div class="section-title">
@@ -273,7 +391,7 @@
                 </div>
             </div>
         </div>
-       </section>
+
         <!-- PASTRIES section -->
 
         <div class="container">
@@ -772,6 +890,209 @@
             </div>
         </div>
 
+         <!-- pie section  -->
+<div class="container">
+
+            <div class="section-title">
+                <img src="" class="iggmg">
+            </div>
+
+            <div class="products">
+
+                <div class="product-card">
+                    <img class="product-card-img" src="assets/images/apple pie 1.jfif">
+                    <div class="card-content">
+                        <h3> APPLE PIE</h3>
+                        <p class="description">A sweet , spiced baked dessert wrapped in a flacky crust</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">RS. 600</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <img class="product-card-img" src="./assets/images/pumpkin pie 1.jfif">
+                    <div class="card-content">
+                        <h3>PUMPKIN PIE</h3>
+                        <p class="description">A creamy , spiced custard baked pie made with pumpkin puree</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">RS. 800</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-card-img" src="./assets/images/pecan pie.jfif">
+                    <div class="card-content">
+                        <h3>PECAN PIE</h3>
+                        <p class="description">A rich , sweet custard pie packed with crunchy pecans and caramel flavour</p>
+                        <div class="bottom">
+                            <div>
+                                <div class="price">RS. 900</div>
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/key lime pie.jfif">
+                    <div class="card-content">
+
+                        <h3>KEY LIME PIE</h3>
+                        <p class="description">A tangy ,refreshing citrus pie made with lime juice,egg,yolks  </p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 850</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/cherry pie.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CHERRY PIE</h3>
+
+                        <p class="description">A sweet and tart baked pie filled with juicy cherries</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 400</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+
+                    <img class="product-card-img" src="assets/images/chocolate silk pie 1.jfif">
+
+                    <div class="card-content">
+
+                        <h3>CHOCOLATE SILK PIE</h3>
+
+                        <p class="description">A rich , velvety chocolate filling in a crust ,topped with whipped cream and chocolate curls</p>
+
+                        <div class="bottom">
+
+                            <div>
+                                <div class="price">Rs. 950</div>
+
+                                <div class="quantity">
+                                    <button onclick="decrease(this)">-</button>
+                                    <span>1</span>
+                                    <button onclick="increase(this)">+</button>
+                                </div>
+                            </div>
+                            <button class="add-cart-btn" onclick="addCart()">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section>
+        <div id="productModal" class="modal-overlay">
+            <div class="modal-card">
+                <span id="modalCloseBtn" class="modal-close"></span>
+                <img id="modalImg" src="" alt="Product Image" class="modal-img">
+                <div class="modal-body">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+
+
+                    <div id="modalRecipe" class="modal-recipe"></div>
+
+                    <div class="modal-bottom">
+                        <div class="modal-price-qty">
+                            <div id="modalPrice" class="modal-price"></div>
+                            <div class="modal-quantity">
+                                <button onclick="changeModalQty(-1)">-</button>
+                                <span id="modalQtyVal">1</span>
+                                <button onclick="changeModalQty(1)">+</button>
+                            </div>
+                        </div>
+                        <button class="modal-add-cart-btn" onclick="addCartFromModal()">
+                            🛒 Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="container">
             <div class="section-title">
@@ -915,9 +1236,6 @@
             </div>
         </div>
         </div>
-
-
-
 
 
     </section>
@@ -1395,8 +1713,8 @@
         </div>
         <div class="footer-lnks">
             <h1>Navigation Links</h1>
-            <a href="#Home">Home</a>
-            <a href="#MENU">Menu</a>
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Site Map</a>
@@ -1410,7 +1728,7 @@
                 <h1>About & Contact Us</h1>
                 <p>📍 Address: 123 Gourmet Street, Bakery Zone</p>
                 <p>📧 Email: info@bakerzbite.com</p>
-                <p>📞 Phone: +92 (800) 555-BAKE</p>
+                <p>📞 Phone: +1 (800) 555-BAKE</p>
             </div>
             <div footer-icons>
                 <h1>Where to Find Us..</h1>
@@ -1423,7 +1741,7 @@
             </div>
         </div>
     </footer>
-    <div class="ticker-bar">
+    <div class="ticker-bar"  >
         <div class="ticker-content" id="continuous-ticker">
             Loading date, time, and location...
         </div>
