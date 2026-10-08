@@ -109,3 +109,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // geolocation end
+
+
+
+
+
+
+<script>
+  function scrollToSection(sectionId, buttonElement) {
+    // 1. Active class toggle (Gold highlight badalna)
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    buttonElement.classList.add('active');
+
+    // 2. Smooth scroll target section tak
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      const navbarOffset = 85; // Fixed/Sticky header height
+      const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarOffset;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
+</script>

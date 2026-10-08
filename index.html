@@ -12,9 +12,8 @@
     <script src="script.js" defer></script>
 
 </head>
-
 <body>
-    <header>
+    <header id="Home"> 
         <nav class="navbar navbar-expand-lg custom-navbar py-2">
             <div class="container">
 
@@ -36,10 +35,10 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav mx-auto mb-3 mb-lg-0 py-2 py-lg-0" id="nav-links">
                         <li class="nav-item">
-                            <a class="nav-link active" href="hero">Home</a>
+                            <a class="nav-link active" href="#Home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Menue</a>
+                            <a class="nav-link" href="#MENU">Menue</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
@@ -97,13 +96,41 @@
         </div>
     </section>
 
-    <div class="menue-container">
+
+
+    <nav class="sticky-top bakerz-filter-nav py-3 px-2">
+  <div class="container-fluid">
+    <ul class="nav nav-pills flex-nowrap overflow-auto gap-2 filter-container justify-content-start justify-content-md-center" style="scrollbar-width: none;">
+      <li class="nav-item">
+        <button class="nav-link filter-btn active text-nowrap" onclick="scrollToSection('pastries', this)">🥐 Pastries</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link filter-btn text-nowrap" onclick="scrollToSection('crossiants', this)">🌙 Croissants</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link filter-btn text-nowrap" onclick="scrollToSection('cakes', this)">🎂 Cakes</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link filter-btn text-nowrap" onclick="scrollToSection('brownies', this)">merch</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link filter-btn text-nowrap" onclick="scrollToSection('cookies', this)">🍪 Cookies</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+    <section id="MENU">
+
+         <div class="menue-container">
         <div class="menue">MENU & SPECIALS</div>
         <p>Handcrafted with Love, Baked Fresh Every Day</p>
     </div>
 
-    <section>
+
         <!-- CROSSIANTS section -->
+          <section id="crossiants">
         <div class="container">
 
             <div class="section-title">
@@ -246,7 +273,7 @@
                 </div>
             </div>
         </div>
-
+       </section>
         <!-- PASTRIES section -->
 
         <div class="container">
@@ -1368,8 +1395,8 @@
         </div>
         <div class="footer-lnks">
             <h1>Navigation Links</h1>
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
+            <a href="#Home">Home</a>
+            <a href="#MENU">Menu</a>
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Site Map</a>
@@ -1383,7 +1410,7 @@
                 <h1>About & Contact Us</h1>
                 <p>📍 Address: 123 Gourmet Street, Bakery Zone</p>
                 <p>📧 Email: info@bakerzbite.com</p>
-                <p>📞 Phone: +1 (800) 555-BAKE</p>
+                <p>📞 Phone: +92 (800) 555-BAKE</p>
             </div>
             <div footer-icons>
                 <h1>Where to Find Us..</h1>
