@@ -110,46 +110,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // geolocation end
 
-
-
 const recipeDatabase = {
-    
-    "Butter Croissant": "<strong>Recipe:</strong> Flour , Butter , Milk , Sugar , Salt , Yeast , Egg",
-    "CLASSIC Fruit & Custard Croissants": "<strong>Recipe:</strong> Milk , Egg Yolks , Sugar , Cornstarch , Vanilla Extract , Fresh Fruits , Aprikot Jam / Glaze",
-    "CLASSIC CROSSIANT": "<strong>Recipe:</strong> Flour , Butter , Milk , Sugar , Salt , Yeast",
-    "CHOCOLATE CROSSIANT": "<strong>Recipe:</strong> Flour , Butter , Chocolate , Milk , Sugar , Salt , Yeast , Egg",
-    "ALMOND CROSSIANT": "<strong>Recipe:</strong> Almond Flour , Butter , Sugar , Egg , Sliced Almonds , Vanilla Extract , Icing Sugar",
-    "CHEESE CROISSANT": "<strong>Recipe:</strong> Flour , Butter , Cheese , Milk , Sugar , Salt , Yeast , Egg",
+    "Butter Croissant": "<strong>ingredients:</strong> Flour , Butter , Milk , Sugar , Salt , Yeast , Egg",
+    "CLASSIC Fruit & Custard Croissants": "<strong>ingredients:</strong> Milk , Egg Yolks , Sugar , Cornstarch , Vanilla Extract , Fresh Fruits , Aprikot Jam / Glaze",
+    "CLASSIC CROSSIANT": "<strong>ingredients:</strong> Flour , Butter , Milk , Sugar , Salt , Yeast",
+    "CHOCOLATE CROSSIANT": "<strong>ingredients:</strong> Flour , Butter , Chocolate , Milk , Sugar , Salt , Yeast , Egg",
+    "ALMOND CROSSIANT": "<strong>ingredients:</strong> Almond Flour , Butter , Sugar , Egg , Sliced Almonds , Vanilla Extract , Icing Sugar",
+    "CHEESE CROISSANT": "<strong>ingredients:</strong> Flour , Butter , Cheese , Milk , Sugar , Salt , Yeast , Egg",
 
-    
-    "PINEAPPLE PASTRY": "<strong>Recipe:</strong> Sponge Cake , Pineapple , Pineapple Syrup , Whipping Cream , Sugar , Cherry",
-    "Mille-Feuille": "<strong>Recipe:</strong> Puff Pastry , Pastry Cream , Icing Sugar , Chocolate Ganache",
-    "Fruit & Ganache Tarts": "<strong>Recipe:</strong> Tart Shell , Chocolate Ganache , Fresh Fruits , Apricot Jam / Glaze ",
-    "CHOCOLATE FUDGE PASTRY": "<strong>Recipe:</strong> Chocolate Sponge , Homemade Fudge Frosting , Dark Chocolate Shavings",
-    "BLACK FOREST PASTRY": "<strong>Recipe:</strong> Dark Cocoa Cake , Cherry Syrup , Whipped Cream , Sour Cherries",
-    "THREE MILK PASTRY": "<strong>Recipe:</strong> Sponge Cake , Evaporated Milk , Condensed Milk , Heavy Cream",
+    "PINEAPPLE PASTRY": "<strong>ingredients:</strong> Sponge Cake , Pineapple , Pineapple Syrup , Whipping Cream , Sugar , Cherry",
+    "Mille-Feuille": "<strong>ingredients:</strong> Puff Pastry , Pastry Cream , Icing Sugar , Chocolate Ganache",
+    "Fruit & Ganache Tarts": "<strong>ingredients:</strong> Tart Shell , Chocolate Ganache , Fresh Fruits , Apricot Jam / Glaze ",
+    "CHOCOLATE FUDGE PASTRY": "<strong>ingredients:</strong> Chocolate Sponge , Homemade Fudge Frosting , Dark Chocolate Shavings",
+    "BLACK FOREST PASTRY": "<strong>ingredients:</strong> Dark Cocoa Cake , Cherry Syrup , Whipped Cream , Sour Cherries",
+    "THREE MILK PASTRY": "<strong>ingredients:</strong> Sponge Cake , Evaporated Milk , Condensed Milk , Heavy Cream",
 
-    
-    "CHOCOLATE CHIP COOKIES": "<strong>Recipe:</strong> Butter Cookie Dough , Milk Chocolate Chips , Sea Salt Flakes",
-    "Molten Center Stuffed": "<strong>Recipe:</strong> Brown Butter Cookie Dough , Nutella / Cookie Butter",
-    "Red Velvet Cream Cheese Cookie": "<strong>Recipe:</strong> Red Cocoa Cookie Dough , Cream Cheese Core",
-    "LAYERS COOKIE": "<strong>Recipe:</strong> Double Chocolate Cookie Dough , Chocolate Chunks , Cocoa",
-    "CATBURY COOKIE": "<strong>Recipe:</strong> Cookie Dough , Cadbury Dairy Milk Chocolate",
-    "CHOCOLATTO": "<strong>Recipe:</strong> Dark Cocoa Biscuit , Chocolate Hazelnut Cream",
+    "CHOCOLATE CHIP COOKIES": "<strong>ingredients:</strong> Butter Cookie Dough , Milk Chocolate Chips , Sea Salt Flakes",
+    "Molten Center Stuffed": "<strong>ingredients:</strong> Brown Butter Cookie Dough , Nutella / Cookie Butter",
+    "Red Velvet Cream Cheese Cookie": "<strong>ingredients:</strong> Red Cocoa Cookie Dough , Cream Cheese Core",
+    "LAYERS COOKIE": "<strong>ingredients:</strong> Double Chocolate Cookie Dough , Chocolate Chunks , Cocoa",
+    "CATBURY COOKIE": "<strong>ingredients:</strong> Cookie Dough , Cadbury Dairy Milk Chocolate",
+    "CHOCOLATTO": "<strong>ingredients:</strong> Dark Cocoa Biscuit , Chocolate Hazelnut Cream",
 
-    "CHEESECAKE": "<strong>Recipe:</strong> Cream Cheese Filling , Graham Cracker Crust",
-    "Handcrafted Truffles": "<strong>Recipe:</strong> Dark Chocolate Ganache , Cocoa Powder , Roasted Pistachios , Coconut Flakes",
-    "Filled Bonbons": "<strong>Recipe:</strong> Dark Chocolate Shells , Salted Caramel / Passion Fruit Curd",
-    "MACARON": "<strong>Recipe:</strong> Almond Flour , French Meringue Shells , Dark Chocolate Ganache",
-    "CHURRO": "<strong>Recipe:</strong> Choux Pastry , Cinnamon Sugar , Hot Chocolate Dip",
-    "ECLAIR": "<strong>Recipe:</strong> Choux Pastry , Vanilla Pastry Cream , Belgian Dark Chocolate Glaze",
+    "CHEESECAKE": "<strong>ingredients:</strong> Cream Cheese Filling , Graham Cracker Crust",
+    "Handcrafted Truffles": "<strong>ingredients:</strong> Dark Chocolate Ganache , Cocoa Powder , Roasted Pistachios , Coconut Flakes",
+    "Filled Bonbons": "<strong>ingredients:</strong> Dark Chocolate Shells , Salted Caramel / Passion Fruit Curd",
+    "MACARON": "<strong>ingredients:</strong> Almond Flour , French Meringue Shells , Dark Chocolate Ganache",
+    "CHURRO": "<strong>ingredients:</strong> Choux Pastry , Cinnamon Sugar , Hot Chocolate Dip",
+    "ECLAIR": "<strong>ingredients:</strong> Choux Pastry , Vanilla Pastry Cream , Belgian Dark Chocolate Glaze",
 
-    "APPLE PIE": "<strong>Recipe:</strong> Pie Crust , Apples , Sugar , Cinnamon , Butter , Lemon Juice",
-    "PUMPKIN PIE": "<strong>Recipe:</strong> Pie Crust , Pumpkin Puree , Evaporated Milk , Eggs , Brown Sugar , Cinnamon , Nutmeg",
-    "PECAN PIE": "<strong>Recipe:</strong> Pie Crust , Pecans , Eggs , Corn Syrup , Brown Sugar , Butter , Vanilla Extract",
-    "KEY LIME PIE": "<strong>Recipe:</strong> Graham Cracker Crust , Key Lime Juice , Condensed Milk , Egg Yolks , Whipped Cream",
-    "CHERRY PIE": "<strong>Recipe:</strong> Pie Crust , Sour Cherries , Sugar , Cornstarch , Butter , Lemon Juice",
-    "CHOCOLATE SILK PIE": "<strong>Recipe:</strong> Oreo Crust , Dark Chocolate , Heavy Cream , Butter , Sugar , Vanilla Extract",
+    "APPLE PIE": "<strong>ingredients:</strong> Pie Crust , Apples , Sugar , Cinnamon , Butter , Lemon Juice",
+    "PUMPKIN PIE": "<strong>ingredients:</strong> Pie Crust , Pumpkin Puree , Evaporated Milk , Eggs , Brown Sugar , Cinnamon , Nutmeg",
+    "PECAN PIE": "<strong>ingredients:</strong> Pie Crust , Pecans , Eggs , Corn Syrup , Brown Sugar , Butter , Vanilla Extract",
+    "KEY LIME PIE": "<strong>ingredients:</strong> Graham Cracker Crust , Key Lime Juice , Condensed Milk , Egg Yolks , Whipped Cream",
+    "CHERRY PIE": "<strong>ingredients:</strong> Pie Crust , Sour Cherries , Sugar , Cornstarch , Butter , Lemon Juice",
+    "CHOCOLATE SILK PIE": "<strong>ingredients:</strong> Oreo Crust , Dark Chocolate , Heavy Cream , Butter , Sugar , Vanilla Extract",
 
     "Bakerz Bite Pro Chef Apron": "<strong>Details:</strong> Made from 100% heavy-duty cotton canvas, featuring adjustable neck straps, deep utility pockets, and embroidered logo.",
     "Bakerz Bite Eco Canvas Tote": "<strong>Details:</strong> Eco-friendly, washable organic canvas tote bag with reinforced handles, designed for daily bakery goods.",
@@ -186,24 +181,120 @@ function changeModalQty(change) {
 }
 
 function addCartFromModal() {
-    const title = document.getElementById('modalTitle').innerText;
-    const qty = document.getElementById('modalQtyVal').innerText;
+    const title = document.getElementById('modalTitle')?.innerText || '';
+    const qty = document.getElementById('modalQtyVal')?.innerText || '1';
     alert(`${qty} x ${title} added to cart!`);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+// Global Event Delegation (Dynamic JSON cards ke liye)
+document.addEventListener('click', function (e) {
+    const card = e.target.closest('.product-card');
+
+    // Agar kisi Card par click hua hai
+    if (card) {
+        // Agar click quantity buttons ya add-cart button par hai to popup na khule
+        if (e.target.closest('.quantity') || e.target.closest('.add-cart-btn')) {
+            return;
+        }
+
+        const modal = document.getElementById('productModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalRecipe = document.getElementById('modalRecipe');
+        const modalQtyVal = document.getElementById('modalQtyVal');
+
+        const img = card.querySelector('.product-card-img')?.src || '';
+        const title = card.querySelector('h3')?.innerText.trim() || '';
+        const price = card.querySelector('.price')?.innerText.trim() || '';
+        const desc = card.querySelector('.description')?.innerText.trim() || '';
+
+        if (modalImg) modalImg.src = img;
+        if (modalTitle) modalTitle.innerText = title;
+        if (modalPrice) modalPrice.innerText = price;
+        if (modalDesc) modalDesc.innerText = desc;
+        if (modalQtyVal) modalQtyVal.innerText = '1';
+
+        // Recipe / Details match karna
+        if (modalRecipe) {
+            if (recipeDatabase[title]) {
+                modalRecipe.innerHTML = recipeDatabase[title];
+            } else {
+                modalRecipe.innerHTML = "<strong>Details:</strong> Handcrafted with premium ingredients and baked fresh daily.";
+            }
+            modalRecipe.style.display = 'block';
+        }
+
+        if (modal) modal.classList.add('active');
+    }
+
+    // Modal Close karne ke liye logic
+    const modal = document.getElementById('productModal');
+    if (modal && (e.target.id === 'modalCloseBtn' || e.target.classList.contains('close-btn') || e.target === modal)) {
+        modal.classList.remove('active');
+    }
+});
+
+// json workkkkk
+
+
+
+// 1. JSON se dynamic HTML card banane ka function
+function createProductCardHTML(product) {
+    return `
+        <div class="product-card">
+            <img class="product-card-img" src="${product.image}">
+            <div class="card-content">
+                <h3>${product.name}</h3>
+                <p class="description">${product.description}</p>
+                <div class="bottom">
+                    <div>
+                        <div class="price">${product.price}</div>
+                        <div class="quantity">
+                            <button onclick="decrease(this)">-</button>
+                            <span>1</span>
+                            <button onclick="increase(this)">+</button>
+                        </div>
+                    </div>
+                    <button class="add-cart-btn" onclick="addCart()">
+                        🛒 Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// 2. products.json fetch karke HTML mein inject karne ka main function
+async function loadProductsFromJSON() {
+    try {
+        const response = await fetch('products.json');
+        const data = await response.json();
+
+        // Har category ke container mein uske cards render karna
+        for (const category in data) {
+            const container = document.getElementById(`${category}-products`);
+            if (container) {
+                container.innerHTML = data[category].map(item => createProductCardHTML(item)).join('');
+            }
+        }
+
+        // Cards load hone ke baad modal events attach karna
+        setupProductModalEvents();
+    } catch (error) {
+        console.error("JSON fetch karne mein error aaya:", error);
+    }
+}
+
+// 3. Dynamic Cards par click karke Modal kholne ka event setup
+function setupProductModalEvents() {
     const modal = document.getElementById('productModal');
     const closeBtn = document.getElementById('modalCloseBtn');
 
-    const modalImg = document.getElementById('modalImg');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalPrice = document.getElementById('modalPrice');
-    const modalDesc = document.getElementById('modalDesc');
-    const modalRecipe = document.getElementById('modalRecipe');
-    const modalQtyVal = document.getElementById('modalQtyVal');
-
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', function (e) {
+            // Agar quantity button ya add to cart par click ho toh modal na khule
             if (e.target.closest('.quantity') || e.target.closest('.add-cart-btn')) {
                 return;
             }
@@ -213,26 +304,54 @@ document.addEventListener('DOMContentLoaded', function () {
             const price = card.querySelector('.price')?.innerText.trim() || '';
             const desc = card.querySelector('.description')?.innerText.trim() || '';
 
-            modalImg.src = img;
-            modalTitle.innerText = title;
-            modalPrice.innerText = price;
-            modalDesc.innerText = desc;
-            modalQtyVal.innerText = '1'; 
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalQtyVal').innerText = '1';
 
-            if (recipeDatabase[title]) {
+            const modalRecipe = document.getElementById('modalRecipe');
+            if (typeof recipeDatabase !== 'undefined' && recipeDatabase[title]) {
                 modalRecipe.innerHTML = recipeDatabase[title];
-                modalRecipe.style.display = 'block';
             } else {
                 modalRecipe.innerHTML = "<strong>Details:</strong> Handcrafted with premium ingredients and baked fresh daily.";
-                modalRecipe.style.display = 'block';
             }
 
             modal.classList.add('active');
         });
     });
 
-    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.classList.remove('active');
-    });
+    if (closeBtn) closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        });
+    }
+}
+
+// Page load hone par JSON fetching start karein
+document.addEventListener('DOMContentLoaded', () => {
+    loadProductsFromJSON();
 });
+
+
+// filter section
+
+ function scrollToSection(sectionId, buttonElement) {
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  buttonElement.classList.add('active');
+  const targetSection = document.getElementById(sectionId);
+  if (targetSection) {
+    const navbarHeight = 85; 
+    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  }
+}
+
+
+
+
+

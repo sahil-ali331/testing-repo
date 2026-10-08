@@ -1,0 +1,268 @@
+{
+    "popular": [
+        {
+            "name": "Butter Croissant",
+            "image": "./assets/images/Butter Croissant.jpg",
+            "description": "The classic golden-brown crescent made with laminated yeast dough and pure butter",
+            "price": "RS. 500"
+        },
+        {
+            "name": "CLASSIC Fruit & Custard Croissants",
+            "image": "./assets/images/Fruit & Custard Croissants.jpg",
+            "description": "Filled with vanilla pastry cream, pistachio paste, Nutella, or fruit preserves (such as raspberry, apricot, or lemon curd).",
+            "price": "RS. 450"
+        },
+        {
+            "name": "Fruit & Ganache Tarts",
+            "image": "./assets/images/Fruit & Ganache Tarts.jpg",
+            "description": "Crisp shortbread crusts (pâte sucrée) filled with rich chocolate ganache or fresh",
+            "price": "RS. 900"
+        },
+        {
+            "name": "Molten Center Stuffed",
+            "image": "./assets/images/Molten Center Stuffed.jpg",
+            "description": "Chunky, NYC-style cookies stuffed with Nutella, caramel, or cookie butter.",
+            "price": "Rs. 250"
+        },
+        {
+            "name": "MACARON",
+            "image": "assets/images/img14.jfif",
+            "description": "A delicate french sweet made of colorful , meringue-based almond cookies",
+            "price": "Rs. 200"
+        },
+        {
+            "name": "APPLE PIE",
+            "image": "assets/images/apple pie 1.jfif",
+            "description": "A sweet , spiced baked dessert wrapped in a flacky crust",
+            "price": "Rs. 600"
+        }
+    ],
+    "croissants": [
+        {
+            "name": "Butter Croissant",
+            "image": "./assets/images/Butter Croissant.jpg",
+            "description": "The classic golden-brown crescent made with laminated yeast dough and pure butter",
+            "price": "RS. 500"
+        },
+        {
+            "name": "CLASSIC Fruit & Custard Croissants",
+            "image": "./assets/images/Fruit & Custard Croissants.jpg",
+            "description": "Filled with vanilla pastry cream, pistachio paste, Nutella, or fruit preserves (such as raspberry, apricot, or lemon curd).",
+            "price": "RS. 450"
+        },
+        {
+            "name": "CLASSIC CROSSIANT",
+            "image": "assets/images/img.jfif",
+            "description": "Flacky , buttery layers of golden pastry that pair perfectly with coffee",
+            "price": "RS. 300"
+        },
+        {
+            "name": "CHOCOLATE CROSSIANT",
+            "image": "assets/images/img2.jfif",
+            "description": "Crispy layers filled with rich , melted chocolate sticks inside.",
+            "price": "Rs. 400"
+        },
+        {
+            "name": "ALMOND CROSSIANT",
+            "image": "assets/images/img3.jfif",
+            "description": "Filled with sweet almond paste and topped with crunchy sliced almonds",
+            "price": "Rs. 450"
+        },
+        {
+            "name": "CHEESE CROSSIANT",
+            "image": "assets/images/img4.jfif",
+            "description": "Savory pastry baked with melted cheese inside and on top",
+            "price": "Rs. 400"
+        }
+    ],
+    "pastries": [
+        {
+            "name": "PINEAPPLE PASTRY",
+            "image": "assets/images/img5.1.jfif",
+            "description": "Soft vanilla cake with cream and light pineapples chunks",
+            "price": "RS. 250"
+        },
+        {
+            "name": "Mille-Feuille",
+            "image": "./assets/images/Mille-Feuille.jpg",
+            "description": "Crispy layers of puff pastry alternated with rich vanilla pastry cream.",
+            "price": "RS. 500"
+        },
+        {
+            "name": "Fruit & Ganache Tarts",
+            "image": "./assets/images/Fruit & Ganache Tarts.jpg",
+            "description": "Crisp shortbread crusts (pâte sucrée) filled with rich chocolate ganache or fresh seasonal berries over custard.",
+            "price": "RS. 900"
+        },
+        {
+            "name": "CHOCOLATE FUDGE PASTRY",
+            "image": "assets/images/img6.jfif",
+            "description": "Rich chocolate sponge layered with thick fudge frosting.",
+            "price": "Rs. 300"
+        },
+        {
+            "name": "BLACK FOREST PASTRY",
+            "image": "assets/images/img7.2.jfif",
+            "description": "Chocolate cake with white cream and cherries combination",
+            "price": "Rs. 250"
+        },
+        {
+            "name": "THREE MILK PASTRY",
+            "image": "assets/images/img8.2.jfif",
+            "description": "Super soft pastry soaked in three types of milk",
+            "price": "Rs. 350"
+        }
+    ],
+    "cookies": [
+        {
+            "name": "CHOCOLATE CHIP COOKIES",
+            "image": "assets/images/img9.jfif",
+            "description": "Classic soft cookies packed with sweet chocolate chips",
+            "price": "RS. 100"
+        },
+        {
+            "name": "Molten Center Stuffed",
+            "image": "./assets/images/Molten Center Stuffed.jpg",
+            "description": "Chunky, NYC-style cookies stuffed with Nutella, caramel, or cookie butter.",
+            "price": "RS. 250"
+        },
+        {
+            "name": "Red Velvet Cream Cheese Cookie",
+            "image": "./assets/images/Red Velvet Cream Cheese.jpg",
+            "description": "Vivid red cocoa dough stuffed with a tangy, sweet cream cheese center.",
+            "price": "RS. 300"
+        },
+        {
+            "name": "LAYERS COOKIE",
+            "image": "assets/images/img10.2.jfif",
+            "description": "Fresh , soft and premium chocolate cookie",
+            "price": "Rs. 150"
+        },
+        {
+            "name": "CATBURY COOKIE",
+            "image": "assets/images/img11.1.jfif",
+            "description": "Crunchy biscuit filled with soft catbury chocolate inside",
+            "price": "Rs. 200"
+        },
+        {
+            "name": "CHOCOLATTO",
+            "image": "assets/images/img12.jfif",
+            "description": "Rich biscuit with a smooth chocolate cream center",
+            "price": "Rs. 350"
+        }
+    ],
+    "sweets": [
+        {
+            "name": "CHEESECAKE",
+            "image": "assets/images/img13.jfif",
+            "description": "A famous American dessert with a thick , creamy cheese layer on a crunchy biscuit crunch",
+            "price": "RS. 450"
+        },
+        {
+            "name": "Handcrafted Truffles",
+            "image": "./assets/images/Molten Center Stuffed.jpg",
+            "description": "Silky dark chocolate ganache rolled in cocoa powder, toasted pistachio, or toasted coconut.",
+            "price": "RS. 500"
+        },
+        {
+            "name": "Filled Bonbons",
+            "image": "./assets/images/Filled Bonbons.jpg",
+            "description": "Glossy, hand-painted chocolate shells packed with salted caramel, passion fruit curd, or hazelnut praline.",
+            "price": "RS. 600"
+        },
+        {
+            "name": "MACARON",
+            "image": "assets/images/img14.jfif",
+            "description": "A delicate french sweet made of colorful , meringue-based almond cookies",
+            "price": "Rs. 200"
+        },
+        {
+            "name": "CHURRO",
+            "image": "assets/images/img15.jfif",
+            "description": "A popular spanish street sweet consisting of fried dough pastry dusted with sugar ...",
+            "price": "Rs. 350"
+        },
+        {
+            "name": "ECLAIR",
+            "image": "assets/images/img16.1.jfif",
+            "description": "An iconic french pastry oblong in shape , filled with rich custurd cream and topped with chocolate glaze",
+            "price": "Rs. 450"
+        }
+    ],
+    "pies": [
+        {
+            "name": "APPLE PIE",
+            "image": "assets/images/apple pie 1.jfif",
+            "description": "A sweet , spiced baked dessert wrapped in a flacky crust",
+            "price": "RS. 600"
+        },
+        {
+            "name": "PUMPKIN PIE",
+            "image": "./assets/images/pumpkin pie 1.jfif",
+            "description": "A creamy , spiced custard baked pie made with pumpkin puree",
+            "price": "RS. 800"
+        },
+        {
+            "name": "PECAN PIE",
+            "image": "./assets/images/pecan pie.jfif",
+            "description": "A rich , sweet custard pie packed with crunchy pecans and caramel flavour",
+            "price": "RS. 900"
+        },
+        {
+            "name": "KEY LIME PIE",
+            "image": "assets/images/key lime pie.jfif",
+            "description": "A tangy ,refreshing citrus pie made with lime juice,egg,yolks",
+            "price": "Rs. 850"
+        },
+        {
+            "name": "CHERRY PIE",
+            "image": "assets/images/cherry pie.jfif",
+            "description": "A sweet and tart baked pie filled with juicy cherries",
+            "price": "Rs. 400"
+        },
+        {
+            "name": "CHOCOLATE SILK PIE",
+            "image": "assets/images/chocolate silk pie 1.jfif",
+            "description": "A rich , velvety chocolate filling in a crust ,topped with whipped cream and chocolate curls",
+            "price": "Rs. 950"
+        }
+    ],
+    "merch": [
+        {
+            "name": "Bakerz Bite Pro Chef Apron",
+            "image": "./assets/images/apron.jpg",
+            "description": "Durable stain-resistant canvas apron with front pockets and printed logo.",
+            "price": "RS. 1,299"
+        },
+        {
+            "name": "Bakerz Bite Eco Canvas Tote",
+            "image": "./assets/images/Canvas Tote Bag.png",
+            "description": "Heavy-duty eco-friendly canvas tote bag. Ideal for carrying fresh bakery items, groceries, or everyday essentials",
+            "price": "RS. 699"
+        },
+        {
+            "name": "Bakerz Bite Classic Cotton Tee",
+            "image": "./assets/images/T-shirt.jpg",
+            "description": "Soft 100% premium cotton t-shirt featuring the iconic Bakerz Bite logo.",
+            "price": "RS. 1,499"
+        },
+        {
+            "name": "Bakerz Bite Signature Ceramic Mug",
+            "image": "./assets/images/Coffee Mug.png",
+            "description": "High-quality ceramic mug printed with Bakerz Bite logo.",
+            "price": "Rs. 799"
+        },
+        {
+            "name": "Bakerz Bite Cozy Knit Beanie",
+            "image": "assets/images/capp.png",
+            "description": "Warm and comfy stretchable knit beanie with embroidered Bakerz Bite logo patch.",
+            "price": "Rs. 899"
+        },
+        {
+            "name": "Bakerz Bite Die-Cut Vinyl Sticker",
+            "image": "./assets/images/stickers.png",
+            "description": "Waterproof vinyl die-cut sticker featuring the Bakerz Bite logo.",
+            "price": "Rs. 149"
+        }
+    ]
+}
