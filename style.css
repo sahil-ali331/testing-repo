@@ -16,6 +16,7 @@ body {
   object-fit: cover;
   width: 100%;
   height: auto;
+  border-radius: 1rem;
 }
 
 header .container {
@@ -40,6 +41,7 @@ header .container {
 .section-title {
   text-align: center;
   margin-bottom: 40px;
+  margin-top: 2rem;
   background-color: #351b18;
   height: 30vh;
   border-radius: 3rem;
@@ -148,6 +150,7 @@ header .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .menue {
@@ -157,7 +160,7 @@ header .container {
   font-weight: 900;
   font-style: italic;
   font-size: 3rem;
-  border-bottom: 3px solid #f8dca4;
+  border-bottom: 1px double #f8dca4;
 
 }
 
@@ -176,6 +179,7 @@ header .container {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 .about {
@@ -184,9 +188,8 @@ header .container {
   letter-spacing: 2px;
   font-weight: 900;
   font-style: italic;
-  margin-top: 5rem;
   font-size: 3rem;
-  border-bottom: 3px solid #f8dca4;
+  border-bottom: 1px double #f8dca4;
 }
 
 .about-container p {
@@ -208,8 +211,7 @@ header .container {
 .about-hero {
   max-width: 1150px;
   margin: auto;
-  min-height: 520px;
-
+  /* min-height: 520px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -487,18 +489,18 @@ header .container {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .services {
-  color: #c88438;
+color: #c88438;
   font-family: Georgia, serif;
   letter-spacing: 2px;
   font-weight: 900;
   font-style: italic;
-  margin-top: 5rem;
   font-size: 3rem;
-  border-bottom: 3px solid #f8dca4;
+  border-bottom: 1px double #f8dca4;
 }
 
 .services-container p {
@@ -568,6 +570,7 @@ header .container {
   color: #432818;
   padding: 0.4rem 1rem;
   border-radius: 25px;
+  border: none;
 }
 
 .add-cart-btn:hover {
@@ -593,6 +596,7 @@ header .container {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 .contact {
@@ -601,9 +605,8 @@ header .container {
   letter-spacing: 2px;
   font-weight: 900;
   font-style: italic;
-  margin-top: 5rem;
   font-size: 3rem;
-  border-bottom: 3px solid #f8dca4;
+  border-bottom: 1px double #f8dca4;
 }
 
 .contact-container p {
@@ -893,45 +896,6 @@ header .container {
   /* border-bottom: 3px solid #99582a; */
 }
 
-.bb-faq-hero-inner {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.bb-faq-top-badge {
-  color: #c88438;
-  font-style: italic;
-  font-weight: bold;
-  font-family: Georgia, serif;
-  font-size: 4rem;
-  letter-spacing: 2px;
-}
-
-.bb-faq-main-heading {
-  font-family: Georgia, serif;
-  font-size: 46px;
-  color: #4b2c20;
-  margin: 0 0 10px;
-  font-weight: 700;
-}
-
-.bb-faq-main-heading span {
-  color: #4b2c20;
-  font-style: italic;
-  font-weight: 400;
-}
-
-.bb-faq-header-subtext {
-  color: #351b18;
-  border-bottom: 1px solid #f8dca4;
-  font-style: italic;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 16px;
-  max-width: 580px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
 .bb-faq-main-wrapper {
   background-color: #faf6f0;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -1133,8 +1097,7 @@ header .container {
   .menue,
   .about,
   .services,
-  .contact,
-  .bb-faq-top-badge {
+  .contact{
     font-size: 2.2rem;
     margin-top: 3rem;
   }
@@ -1280,19 +1243,11 @@ header .container {
   .menue,
   .about,
   .services,
-  .contact,
-  .bb-faq-top-badge {
+  .contact {
     font-size: 1.2rem;
     margin-top: 2rem;
   }
 
-  .menue-container p,
-  .about-container p,
-  .services-container p,
-  .contact-container p {
-    font-size: 0.60rem;
-    padding: 0 10px;
-  }
 
   .about-page {
     padding: 20px 3%;
@@ -1387,6 +1342,7 @@ header .container {
     gap: 8px;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 1rem;
   }
 
   .value-card {
@@ -1509,7 +1465,7 @@ header .container {
 @media (max-width: 480px) {
 
   .products {
-    gap: 4px;
+    gap: 5px;
   }
 
   .product-card-img {
@@ -1903,27 +1859,6 @@ header .container {
   padding: 35px 5%;
   background: #faf6f0;
 }
-
-
-/* =========================
-   HEADING
-========================= */
-
-.bbz-gallery-title {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.bbz-gallery-title h1 {
-  font-size: 38px;
-  margin-bottom: 5px;
-}
-
-.bbz-gallery-title p {
-  font-size: 14px;
-}
-
-
 /* =========================
    GALLERY
 ========================= */
@@ -2276,9 +2211,6 @@ header .container {
 }
 
 @media (max-width: 600px) {
-  body {
-    padding-bottom: 56px;
-  }
 
   .footer-content {
     grid-template-columns: minmax(0, 1fr);

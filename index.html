@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg custom-navbar py-2">
+        <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container">
 
                 <a class="navbar-brand d-flex align-items-center" href="#">
@@ -111,7 +111,7 @@
     <section>
 
         <div class="container">
-            <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+            <div class="d-flex align-items-center justify-content-between mb-4 mt-5 flex-wrap gap-2">
                 <div>
                     <h2 class="fw-bold text-dark fs-3 mb-0 d-flex align-items-center gap-2 chal-hat">
                         <span>🔥</span> POPULAR ITEMS
@@ -131,7 +131,7 @@
         <div class="container">
 
             <!-- Section Title & Subtitle -->
-            <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+            <div class="d-flex align-items-center justify-content-between mb-4 mt-3 flex-wrap gap-2">
                 <div>
                     <!-- <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-2">LIMITED TIME DEALS</span> -->
                     <h2 class="fw-bold text-dark fs-3 mb-0 d-flex align-items-center gap-2 chal-hat">
@@ -284,8 +284,7 @@
 
 
     <div class="menue-container">
-        <div class="menue">MENU & SPECIALS</div>
-        <p>Handcrafted with Love, Baked Fresh Every Day</p>
+        <div class="menue">The Bakery Selection</div>
     </div>
 
     <section id="menu">
@@ -345,7 +344,6 @@
 
     <div class="about-container">
         <div class="about">ABOUT US</div>
-        <p>Freshly Baked Delights & Exclusive Brand Merch.</p>
     </div>
 
     <section class="about-page" id="about">
@@ -448,7 +446,7 @@
                 </p>
             </div>
 
-            <a class="about-btn">Thank you ❤️</a>
+            <a class="about-btn">Thank you</a>
 
         </div>
     </section>
@@ -458,10 +456,11 @@
 
     <section class="bbz-gallery-section" id="gallery">
 
-        <div class="bbz-gallery-title">
-            <h1>Photo Gallery</h1>
-            <p>Take a visual tour of our freshly baked delights</p>
+         <div class="menue-container">
+        <div class="menue">Photo Gallery</div>
         </div>
+        
+
 
 
         <div class="bbz-gallery-boxes">
@@ -510,22 +509,14 @@
 
     <!-- galery section end -->
 
-
-
-    <div class="services-container">
-        <div class="services">OUR SERVICES</div>
-        <p>Making Your Events Extra Sweet with Custom Bakes.</p>
-    </div>
-
-
-
     <section id="services">
 
 
          <div class="services-container">
         <div class="services">OUR SERVICES</div>
-        <p>Making Your Events Extra Sweet with Custom Bakes.</p>
     </div>
+
+
     <div class="values">
 
 
@@ -555,12 +546,11 @@
     </div>
 
     <section class="bb-faq-hero-container" id="testimonial">
-        <div class="bb-faq-hero-inner">
-            <h1 class="bb-faq-top-badge">"Testimonials"</h1>
-            <h1 class="bb-faq-main-heading"><span>The Wall of Love...</span></h1>
-            <!-- <div class="bb-faq-divider-line"><span>🥐</span></div> -->
-            <p class="bb-faq-header-subtext">Straight from the hearts of our awesome customers.</p>
-        </div>
+        <div class="menue-container">
+        <div class="menue">Testimonials</div>
+    </div>
+
+
     </section>
 
     <div class="testimonial-containerr">
@@ -657,12 +647,10 @@
 
 
     <section class="bb-faq-hero-container" id="faqs">
-        <div class="bb-faq-hero-inner">
-            <h1 class="bb-faq-top-badge">FAQs...</h1>
-            <h1 class="bb-faq-main-heading">Got Questions? <span>We Have Answers</span></h1>
-            <p class="bb-faq-header-subtext">Everything you need to know about our freshly baked treats, custom orders,
-                and daily deliveries.</p>
+         <div class="menue-container">
+        <div class="menue">Got Questions?</div>
         </div>
+
     </section>
 
     <section class="bb-faq-main-wrapper">
@@ -778,7 +766,6 @@
 
         <div class="contact-container">
             <div class="contact">LET’S CONNECT</div>
-            <p>We’d Love to Hear From You — Drop Us a Line!</p>
         </div>
 
         <section class="bbcnt-main-wrapper">
@@ -873,7 +860,27 @@
     </section>
     <!-- contact us section -->
 
-     <footer class="site-footer">
+    
+
+    <div id="productModal" class="modal-overlay">
+    <div class="modal-card">
+        <button class="close-btn" id="modalCloseBtn">&times;</button>
+        <img id="modalImg" src="" alt="Product Image">
+        <h3 id="modalTitle"></h3>
+        <div class="price" id="modalPrice"></div>
+        <p id="modalDesc" class="description"></p>
+        <p id="modalRecipe"></p>
+        <div class="quantity my-2">
+            <button onclick="changeModalQty(-1)">-</button>
+            <span id="modalQtyVal">1</span>
+            <button onclick="changeModalQty(1)">+</button>
+        </div>
+        <button class="add-cart-btn" onclick="addCartFromModal()">🛒 Add to Cart</button>
+    </div>
+</div>
+
+
+ <footer class="site-footer">
     <div class="container footer-content">
 
       <div class="footer-brand-group">
@@ -924,23 +931,5 @@
         </div>
     </div>
 
-    <div id="productModal" class="modal-overlay">
-    <div class="modal-card">
-        <button class="close-btn" id="modalCloseBtn">&times;</button>
-        <img id="modalImg" src="" alt="Product Image">
-        <h3 id="modalTitle"></h3>
-        <div class="price" id="modalPrice"></div>
-        <p id="modalDesc" class="description"></p>
-        <p id="modalRecipe"></p>
-        <div class="quantity my-2">
-            <button onclick="changeModalQty(-1)">-</button>
-            <span id="modalQtyVal">1</span>
-            <button onclick="changeModalQty(1)">+</button>
-        </div>
-        <button class="add-cart-btn" onclick="addCartFromModal()">🛒 Add to Cart</button>
-    </div>
-</div>
-
 </body>
-
 </html>
