@@ -18,6 +18,11 @@ body {
   border-radius: 1rem;
 }
 
+#nav-links .nav-link:hover {
+  color: #ffffff !important;
+  background-color: #d4af37 !important;
+}
+
 header .container {
   margin-top: 0;
   margin-bottom: 0;
