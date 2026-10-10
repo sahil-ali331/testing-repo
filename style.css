@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -494,7 +493,7 @@ header .container {
 }
 
 .services {
-color: #c88438;
+  color: #c88438;
   font-family: Georgia, serif;
   letter-spacing: 2px;
   font-weight: 900;
@@ -1097,7 +1096,7 @@ color: #c88438;
   .menue,
   .about,
   .services,
-  .contact{
+  .contact {
     font-size: 2.2rem;
     margin-top: 3rem;
   }
@@ -1150,6 +1149,7 @@ color: #c88438;
   .story-content h2 {
     font-size: 30px;
   }
+
   .section-title {
     height: auto;
     border-radius: 1.5rem;
@@ -1336,6 +1336,10 @@ color: #c88438;
 
   .about-btn {
     font-size: 7px;
+    margin-top: 1px;
+    padding: 10px;
+    width: 5rem;
+    text-align: center;
   }
 
   .value-cards {
@@ -1716,138 +1720,138 @@ color: #c88438;
 
 /* ================= Modal CSS Fix ================= */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 99999;
-    padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99999;
+  padding: 15px;
 }
 
 .modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal-card {
-    background: #ffffff;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 480px;
-    padding: 25px;
-    position: relative;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-    border: 2px solid #99582a;
-    transform: scale(0.8);
-    transition: all 0.3s ease;
-    max-height: 90vh;
-    overflow-y: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 480px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  border: 2px solid #99582a;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .modal-overlay.active .modal-card {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .modal-card .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #432818;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #432818;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .modal-card .close-btn:hover {
-    color: #8b3a25;
+  color: #8b3a25;
 }
 
 .modal-card #modalImg {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
 .modal-card #modalTitle {
-    font-family: Georgia, serif;
-    color: #4b1515;
-    font-size: 24px;
-    margin-bottom: 8px;
+  font-family: Georgia, serif;
+  color: #4b1515;
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
 .modal-card #modalPrice {
-    font-size: 20px;
-    font-weight: bold;
-    color: #8b3a25;
-    margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #8b3a25;
+  margin-bottom: 10px;
 }
 
 .modal-card #modalDesc {
-    color: #776563;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 12px;
+  color: #776563;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
 
 .modal-card #modalRecipe {
-    background: #faf6f0;
-    border-left: 3px solid #99582a;
-    padding: 10px 14px;
-    border-radius: 6px;
-    font-size: 13px;
-    color: #523a31;
-    line-height: 1.5;
-    margin-bottom: 15px;
+  background: #faf6f0;
+  border-left: 3px solid #99582a;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #523a31;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 .modal-card .quantity {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
 }
 
 .modal-card .quantity button {
-    width: 32px;
-    height: 32px;
-    border: none;
-    border-radius: 50%;
-    background: #f4dfc8;
-    color: #4b1515;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #f4dfc8;
+  color: #4b1515;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .modal-card .add-cart-btn {
-    background-color: #4b2c20;
-    color: #ffe6a7;
-    padding: 12px;
-    border-radius: 25px;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 100%;
+  background-color: #4b2c20;
+  color: #ffe6a7;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
 }
 
 .modal-card .add-cart-btn:hover {
-    background-color: #99582a;
-    color: #ffffff;
+  background-color: #99582a;
+  color: #ffffff;
 }
 
 /* gallery section */
@@ -1859,6 +1863,7 @@ color: #c88438;
   padding: 35px 5%;
   background: #faf6f0;
 }
+
 /* =========================
    GALLERY
 ========================= */
@@ -1888,7 +1893,7 @@ color: #c88438;
 
   border-radius: 18px;
 
-  box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
 .bbz-photo-box img {
@@ -1965,7 +1970,7 @@ color: #c88438;
   font-size: 15px;
   font-weight: bold;
 
-  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -2060,7 +2065,7 @@ color: #c88438;
 .bakerz-filter-nav {
   /* background-color: #351b18;  */
   /* height: 10vh; */
-   /* border-bottom: 2px solid #c88438; */
+  /* border-bottom: 2px solid #c88438; */
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -2074,17 +2079,20 @@ color: #c88438;
   flex-wrap: nowrap;
   overflow-x: auto;
   white-space: nowrap;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
   -webkit-overflow-scrolling: touch;
 }
 
 .filter-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome / Safari */
+  display: none;
+  /* Chrome / Safari */
 }
 
 /* Pill Buttons Styling */
 .filter-btn {
-  flex: 0 0 auto; /* Buttons ko shrink hone se rokne ke liye */
+  flex: 0 0 auto;
+  /* Buttons ko shrink hone se rokne ke liye */
   color: #ffe6a7;
   border: 1px solid #d4af37;
   background-color: rgba(53, 27, 24, 0.8);
@@ -2097,7 +2105,8 @@ color: #c88438;
 }
 
 /* Active & Hover State */
-.filter-btn.active, .filter-btn:hover {
+.filter-btn.active,
+.filter-btn:hover {
   background: linear-gradient(135deg, #d4af37, #c88438);
   color: #23110f;
   border-color: transparent;
@@ -2113,7 +2122,7 @@ color: #c88438;
 
 .site-footer {
   padding: 32px 0;
-  background:#432818;
+  background: #432818;
   border-top: 2px solid #FFE6A7;
   color: #ffffff;
 }
@@ -2121,9 +2130,7 @@ color: #c88438;
 .footer-content {
   display: grid;
   grid-template-columns:
-    minmax(190px, 1fr)
-    minmax(160px, 0.8fr)
-    minmax(220px, 1fr);
+    minmax(190px, 1fr) minmax(160px, 0.8fr) minmax(220px, 1fr);
   align-items: start;
   gap: 26px 36px;
 }
@@ -2182,7 +2189,7 @@ color: #c88438;
 .sitemap-links a::before {
   content: "•";
   flex: 0 0 auto;
-  color:#FFE6A7;
+  color: #FFE6A7;
   font-size: 16px;
   line-height: 1;
 }
@@ -2193,7 +2200,7 @@ color: #c88438;
   text-decoration: underline;
 }
 
-.site-footer .footer-content > small {
+.site-footer .footer-content>small {
   grid-column: 1 / -1;
   padding-top: 16px;
   border-top: 1px solid #ffffff2a;
@@ -2232,11 +2239,11 @@ color: #c88438;
     line-height: 1.45;
   }
 
-  .site-footer .footer-content > small {
+  .site-footer .footer-content>small {
     grid-column: auto;
   }
 
-  
+
 }
 
 @media (max-width: 360px) {
@@ -2249,5 +2256,5 @@ color: #c88438;
     grid-template-columns: 1fr;
   }
 
-  
+
 }

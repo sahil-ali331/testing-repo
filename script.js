@@ -1,4 +1,4 @@
-// contact us section start
+// For contact Section
 const contactForm = document.getElementById('bbcntContactForm');
 const popupOverlay = document.getElementById('bbcntSuccessPopup');
 const closeBtn = document.getElementById('bbcntClosePopup');
@@ -18,7 +18,6 @@ popupOverlay.addEventListener('click', function (e) {
         popupOverlay.classList.remove('bbcnt-popup-active');
     }
 });
-// contact us section end
 
 // FAQs section start
 
@@ -36,9 +35,8 @@ document.querySelectorAll('.bb-faq-trigger-btn').forEach(button => {
     });
 });
 
-// FAQs section end
 
-// 
+// For visitor count
 
 document.addEventListener("DOMContentLoaded", () => {
     let visits = localStorage.getItem("bakerz_visitor_count");
@@ -51,14 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("visitor-count").textContent = visits;
 });
 
-// visit count end
-
 // geolocation start
 
 document.addEventListener("DOMContentLoaded", () => {
     let locationData = "Detecting location...";
 
-    // 1. Geolocation Access (Latitude, Longitude & City)
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -66,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const lon = position.coords.longitude.toFixed(4);
                 locationData = `Lat: ${lat}, Lon: ${lon}`;
 
-                // City name ke liye OpenStreetMap Reverse Geocoding
                 fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
                     .then(res => res.json())
                     .then(data => {
@@ -88,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateTicker();
     }
 
-    // 2. Continuous Date, Time & Location Text Updater
+    // Continuous Date, Time & Location Text Updater
     function updateTicker() {
         const now = new Date();
         const dateStr = now.toLocaleDateString("en-US", {
@@ -103,13 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("continuous-ticker").textContent = tickerText;
     }
 
-    // Har 1 second mein time update hoga
     setInterval(updateTicker, 1000);
     updateTicker();
 });
 
-// geolocation end
-
+// For JSON products
 const recipeDatabase = {
     "Butter Croissant": "<strong>ingredients:</strong> Flour , Butter , Milk , Sugar , Salt , Yeast , Egg",
     "CLASSIC Fruit & Custard Croissants": "<strong>ingredients:</strong> Milk , Egg Yolks , Sugar , Cornstarch , Vanilla Extract , Fresh Fruits , Aprikot Jam / Glaze",
@@ -186,11 +178,9 @@ function addCartFromModal() {
     alert(`${qty} x ${title} added to cart!`);
 }
 
-// Global Event Delegation (Dynamic JSON cards ke liye)
 document.addEventListener('click', function (e) {
     const card = e.target.closest('.product-card');
 
-    // Agar kisi Card par click hua hai
     if (card) {
         // Agar click quantity buttons ya add-cart button par hai to popup na khule
         if (e.target.closest('.quantity') || e.target.closest('.add-cart-btn')) {
@@ -216,7 +206,6 @@ document.addEventListener('click', function (e) {
         if (modalDesc) modalDesc.innerText = desc;
         if (modalQtyVal) modalQtyVal.innerText = '1';
 
-        // Recipe / Details match karna
         if (modalRecipe) {
             if (recipeDatabase[title]) {
                 modalRecipe.innerHTML = recipeDatabase[title];
@@ -229,18 +218,14 @@ document.addEventListener('click', function (e) {
         if (modal) modal.classList.add('active');
     }
 
-    // Modal Close karne ke liye logic
     const modal = document.getElementById('productModal');
     if (modal && (e.target.id === 'modalCloseBtn' || e.target.classList.contains('close-btn') || e.target === modal)) {
         modal.classList.remove('active');
     }
 });
 
-// json workkkkk
 
-
-
-// 1. JSON se dynamic HTML card banane ka function
+// JSON se dynamic HTML card banane ka function
 function createProductCardHTML(product) {
     return `
         <div class="product-card">
@@ -266,13 +251,11 @@ function createProductCardHTML(product) {
     `;
 }
 
-// 2. products.json fetch karke HTML mein inject karne ka main function
 async function loadProductsFromJSON() {
     try {
         const response = await fetch('products.json');
         const data = await response.json();
 
-        // Har category ke container mein uske cards render karna
         for (const category in data) {
             const container = document.getElementById(`${category}-products`);
             if (container) {
@@ -280,21 +263,18 @@ async function loadProductsFromJSON() {
             }
         }
 
-        // Cards load hone ke baad modal events attach karna
         setupProductModalEvents();
     } catch (error) {
         console.error("JSON fetch karne mein error aaya:", error);
     }
 }
 
-// 3. Dynamic Cards par click karke Modal kholne ka event setup
 function setupProductModalEvents() {
     const modal = document.getElementById('productModal');
     const closeBtn = document.getElementById('modalCloseBtn');
 
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', function (e) {
-            // Agar quantity button ya add to cart par click ho toh modal na khule
             if (e.target.closest('.quantity') || e.target.closest('.add-cart-btn')) {
                 return;
             }
@@ -329,7 +309,6 @@ function setupProductModalEvents() {
     }
 }
 
-// Page load hone par JSON fetching start karein
 document.addEventListener('DOMContentLoaded', () => {
     loadProductsFromJSON();
 });
