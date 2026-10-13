@@ -1,26 +1,242 @@
-// For contact Section
-const contactForm = document.getElementById('bbcntContactForm');
-const popupOverlay = document.getElementById('bbcntSuccessPopup');
-const closeBtn = document.getElementById('bbcntClosePopup');
+// ==================== 1. TESTIMONIALS & FEEDBACK CAROUSEL DATA ====================
+const defaultTestimonials = [
+    {
+        name: "Sarah Khan",
+        tag: "Verified Buyer • Custom Cakes",
+        rating: 5,
+        subject: "Best Cake in Karachi!",
+        message: "The custom Belgian chocolate fudge cake for my birthday was unreal! Super moist, rich, and perfectly sweet. Everyone at the party asked for your location!",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80"
+    },
+    {
+        name: "Ahmed Raza",
+        tag: "Bread Enthusiast",
+        rating: 5,
+        subject: "Artisanal Sourdough Perfection",
+        message: "You can literally taste the quality in their artisanal sourdough bread. Perfectly crispy crust on the outside, incredibly soft and airy inside.",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80"
+    },
+    {
+        name: "Mariam Tariq",
+        tag: "Regular Customer",
+        rating: 5,
+        subject: "Heavenly Macarons & Cookies",
+        message: "From their French macarons to chocolate chip cookies, everything looks like food art and tastes even better. Bakerz Bite is my go-to spot!",
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
+    },
+    {
+        name: "Zainab Ali",
+        tag: "Verified Buyer • Pastries",
+        rating: 5,
+        subject: "Melt-in-mouth Croissants",
+        message: "Their butter croissants are golden, flaky, and buttery perfection. Tastes just like a authentic Parisian bakery in the morning!",
+        avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80"
+    },
+    {
+        name: "Bilal Sheikh",
+        tag: "Event Organizer",
+        rating: 5,
+        subject: "Flawless Catering Delivery",
+        message: "Ordered 50+ dessert boxes for our corporate event. The packaging, freshness, and delivery timing were 10/10. Highly recommended!",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80"
+    },
+    {
+        name: "Hania Asif",
+        tag: "Sweet Tooth Lover",
+        rating: 5,
+        subject: "Red Velvet Bliss!",
+        message: "The Red Velvet Cream Cheese Cookies are addicting! Always fresh and soft. Bakerz Bite never disappoints.",
+        avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80"
+    }
+];
 
-contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    popupOverlay.classList.add('bbcnt-popup-active');
-    contactForm.reset();
-});
+// Helper to sanitize HTML input
+function escapeHTML(str) {
+    return (str || '').replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+    );
+}
 
-closeBtn.addEventListener('click', function () {
-    popupOverlay.classList.remove('bbcnt-popup-active');
-});
+// Function to render testimonials (User feedbacks FIRST, Dummy Data END)
+window.renderTestimonials = function() {
+    const container = document.getElementById('testimonialContainer');
+    if (!container) return;
 
-popupOverlay.addEventListener('click', function (e) {
-    if (e.target === popupOverlay) {
-        popupOverlay.classList.remove('bbcnt-popup-active');
+    let storedFeedbacks = [];
+    try {
+        storedFeedbacks = JSON.parse(localStorage.getItem('bakerz_feedbacks')) || [];
+    } catch (err) {
+        console.error("LocalStorage read error:", err);
+    }
+
+    const userFeedbacks = storedFeedbacks.slice().reverse().map(item => ({
+        id: item.id,
+        name: item.name,
+        tag: `Verified Buyer • ${item.date || 'Recent'}`,
+        rating: parseInt(item.rating) || 5,
+        subject: item.subject || 'Customer Feedback',
+        message: item.message,
+        avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=d4af37&color=23140c&bold=true&size=128`,
+        isUser: true
+    }));
+
+    const combinedTestimonials = [...userFeedbacks, ...defaultTestimonials];
+
+    container.innerHTML = combinedTestimonials.map(item => {
+        const starCount = item.rating;
+        const stars = '★'.repeat(starCount) + '☆'.repeat(5 - starCount);
+        const avatarUrl = item.avatar;
+
+        return `
+            <div class="testimonial-card">
+                <div class="testimonial-card-top">
+                    <div class="stars">${stars}</div>
+                    ${item.isUser ? `<button type="button" class="testimonial-delete-btn" onclick="deleteFeedback(${item.id})" title="Delete Feedback">&times;</button>` : ''}
+                </div>
+
+                <h3 class="testimonial-title">"${escapeHTML(item.subject)}"</h3>
+                <p class="testimonial-text">"${escapeHTML(item.message)}"</p>
+
+                <div class="author-container">
+                    <img src="${avatarUrl}" alt="${escapeHTML(item.name)}" class="author-img" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=d4af37&color=23140c&bold=true'">
+                    <div class="author-info">
+                        <span class="author-name">${escapeHTML(item.name)}</span>
+                        <span class="author-tag">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="#d4af37"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            ${escapeHTML(item.tag)}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+};
+
+// Global Delete Function for User Feedbacks
+window.deleteFeedback = function(id) {
+    if (confirm("Are you sure you want to delete this feedback response?")) {
+        try {
+            let feedbacks = JSON.parse(localStorage.getItem('bakerz_feedbacks')) || [];
+            feedbacks = feedbacks.filter(item => item.id !== id);
+            localStorage.setItem('bakerz_feedbacks', JSON.stringify(feedbacks));
+            window.renderTestimonials();
+        } catch (err) {
+            console.error("LocalStorage delete error:", err);
+        }
+    }
+};
+
+// ==================== 2. MAIN INITIALIZATION & CONTACT FORM ====================
+document.addEventListener("DOMContentLoaded", () => {
+    // Render Testimonials
+    window.renderTestimonials();
+
+    // Carousel Navigation Controls
+    const prevBtn = document.getElementById('testimonialPrev');
+    const nextBtn = document.getElementById('testimonialNext');
+    const carouselContainer = document.getElementById('testimonialContainer');
+
+    if (prevBtn && carouselContainer) {
+        prevBtn.addEventListener('click', () => {
+            carouselContainer.scrollBy({ left: -360, behavior: 'smooth' });
+        });
+    }
+
+    if (nextBtn && carouselContainer) {
+        nextBtn.addEventListener('click', () => {
+            carouselContainer.scrollBy({ left: 360, behavior: 'smooth' });
+        });
+    }
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('bbcntContactForm');
+    const popupOverlay = document.getElementById('bbcntSuccessPopup');
+    const closeBtn = document.getElementById('bbcntClosePopup');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nameInput = document.getElementById('bbcntName');
+            const emailInput = document.getElementById('bbcntEmail');
+            const subjectInput = document.getElementById('bbcntSubject');
+            const messageInput = document.getElementById('bbcntMessage');
+            const ratingInput = contactForm.querySelector('input[name="rating"]:checked');
+
+            const name = nameInput ? nameInput.value.trim() : '';
+            const email = emailInput ? emailInput.value.trim() : '';
+            const subject = subjectInput ? subjectInput.value.trim() : '';
+            const message = messageInput ? messageInput.value.trim() : '';
+            const rating = ratingInput ? ratingInput.value : '0';
+
+            // Validation 1: Name (Only letters & spaces allowed)
+            const nameRegex = /^[A-Za-z\s]+$/;
+            if (!nameRegex.test(name)) {
+                alert("Please enter a valid name. Numbers and special characters are not allowed!");
+                if (nameInput) nameInput.focus();
+                return;
+            }
+
+            // Validation 2: Email (Valid email format)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address (e.g., user@example.com)!");
+                if (emailInput) emailInput.focus();
+                return;
+            }
+
+            // Validation 3: Star Rating
+            if (rating === '0') {
+                alert("Please select a star rating before submitting!");
+                return;
+            }
+
+            // Create response object
+            const newFeedback = {
+                id: Date.now(),
+                name: name,
+                email: email,
+                subject: subject,
+                rating: rating,
+                message: message,
+                date: new Date().toLocaleDateString('en-US', {
+                    month: 'short', day: 'numeric', year: 'numeric'
+                })
+            };
+
+            // Save to LocalStorage
+            try {
+                let feedbacksList = JSON.parse(localStorage.getItem('bakerz_feedbacks')) || [];
+                feedbacksList.push(newFeedback);
+                localStorage.setItem('bakerz_feedbacks', JSON.stringify(feedbacksList));
+            } catch (err) {
+                console.error("LocalStorage save error:", err);
+            }
+
+            // Re-render testimonials & show popup
+            window.renderTestimonials();
+            if (popupOverlay) popupOverlay.classList.add('bbcnt-popup-active');
+            contactForm.reset();
+
+            // Scroll carousel to top/first item
+            if (carouselContainer) {
+                carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+            }
+        });
+    }
+
+    if (closeBtn && popupOverlay) {
+        closeBtn.addEventListener('click', () => popupOverlay.classList.remove('bbcnt-popup-active'));
+    }
+
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) popupOverlay.classList.remove('bbcnt-popup-active');
+        });
     }
 });
 
-// FAQs section start
-
+// ==================== 3. FAQS ACCORDION ====================
 document.querySelectorAll('.bb-faq-trigger-btn').forEach(button => {
     button.addEventListener('click', () => {
         const currentItem = button.parentElement;
@@ -35,22 +251,26 @@ document.querySelectorAll('.bb-faq-trigger-btn').forEach(button => {
     });
 });
 
-
-// For visitor count
-
+// ==================== 4. VISITOR COUNTER ====================
 document.addEventListener("DOMContentLoaded", () => {
-    let visits = localStorage.getItem("bakerz_visitor_count");
-    if (visits === null) {
-        visits = 1;
-    } else {
-        visits = parseInt(visits) + 1;
+    try {
+        let visits = localStorage.getItem("bakerz_visitor_count");
+        if (visits === null) {
+            visits = 1;
+        } else {
+            visits = parseInt(visits) + 1;
+        }
+        localStorage.setItem("bakerz_visitor_count", visits);
+        const counterEl = document.getElementById("visitor-count");
+        if (counterEl) {
+            counterEl.textContent = visits;
+        }
+    } catch (e) {
+        console.error("Visitor count error:", e);
     }
-    localStorage.setItem("bakerz_visitor_count", visits);
-    document.getElementById("visitor-count").textContent = visits;
 });
 
-// geolocation start
-
+// ==================== 5. GEOLOCATION TICKER ====================
 document.addEventListener("DOMContentLoaded", () => {
     let locationData = "Detecting location...";
 
@@ -72,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     })
                     .catch(() => updateTicker());
             },
-            (error) => {
+            () => {
                 locationData = "Location Access Denied";
                 updateTicker();
             }
@@ -82,7 +302,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateTicker();
     }
 
-    // Continuous Date, Time & Location Text Updater
     function updateTicker() {
         const now = new Date();
         const dateStr = now.toLocaleDateString("en-US", {
@@ -94,14 +313,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const tickerText = `📍 Location: ${locationData} | 📅 Date: ${dateStr} | 🕒 Time: ${timeStr} | 🧁 Welcome to Bakerz Bite — Where smiles are served daily!`;
 
-        document.getElementById("continuous-ticker").textContent = tickerText;
+        const tickerEl = document.getElementById("continuous-ticker");
+        if (tickerEl) {
+            tickerEl.textContent = tickerText;
+        }
     }
 
     setInterval(updateTicker, 1000);
     updateTicker();
 });
 
-// For JSON products
+// ==================== 6. RECIPE DATABASE & UTILITIES ====================
 const recipeDatabase = {
     "Butter Croissant": "<strong>ingredients:</strong> Flour , Butter , Milk , Sugar , Salt , Yeast , Egg",
     "CLASSIC Fruit & Custard Croissants": "<strong>ingredients:</strong> Milk , Egg Yolks , Sugar , Cornstarch , Vanilla Extract , Fresh Fruits , Aprikot Jam / Glaze",
@@ -136,14 +358,7 @@ const recipeDatabase = {
     "PECAN PIE": "<strong>ingredients:</strong> Pie Crust , Pecans , Eggs , Corn Syrup , Brown Sugar , Butter , Vanilla Extract",
     "KEY LIME PIE": "<strong>ingredients:</strong> Graham Cracker Crust , Key Lime Juice , Condensed Milk , Egg Yolks , Whipped Cream",
     "CHERRY PIE": "<strong>ingredients:</strong> Pie Crust , Sour Cherries , Sugar , Cornstarch , Butter , Lemon Juice",
-    "CHOCOLATE SILK PIE": "<strong>ingredients:</strong> Oreo Crust , Dark Chocolate , Heavy Cream , Butter , Sugar , Vanilla Extract",
-
-    "Bakerz Bite Pro Chef Apron": "<strong>Details:</strong> Made from 100% heavy-duty cotton canvas, featuring adjustable neck straps, deep utility pockets, and embroidered logo.",
-    "Bakerz Bite Eco Canvas Tote": "<strong>Details:</strong> Eco-friendly, washable organic canvas tote bag with reinforced handles, designed for daily bakery goods.",
-    "Bakerz Bite Classic Cotton Tee": "<strong>Details:</strong> Ultra-soft 180 GSM combed cotton t-shirt with breathable print and classic crew neck fit.",
-    "Bakerz Bite Signature Ceramic Mug": "<strong>Details:</strong> 350ml durable ceramic mug, microwave and dishwasher safe, featuring ergonomic handle and glossy logo.",
-    "Bakerz Bite Cozy Knit Beanie": "<strong>Details:</strong> Stretchable soft acrylic wool blend knit cap with stitched logo badge for maximum comfort.",
-    "Bakerz Bite Die-Cut Vinyl Sticker": "<strong>Details:</strong> Premium waterproof vinyl sticker, scratch-resistant and UV protected. Perfect for laptops, bottles, and notebooks."
+    "CHOCOLATE SILK PIE": "<strong>ingredients:</strong> Oreo Crust , Dark Chocolate , Heavy Cream , Butter , Sugar , Vanilla Extract"
 };
 
 function increase(btn) {
@@ -178,11 +393,11 @@ function addCartFromModal() {
     alert(`${qty} x ${title} added to cart!`);
 }
 
+// ==================== 7. MODAL EVENTS ====================
 document.addEventListener('click', function (e) {
     const card = e.target.closest('.product-card');
 
     if (card) {
-        // Agar click quantity buttons ya add-cart button par hai to popup na khule
         if (e.target.closest('.quantity') || e.target.closest('.add-cart-btn')) {
             return;
         }
@@ -224,8 +439,7 @@ document.addEventListener('click', function (e) {
     }
 });
 
-
-// JSON se dynamic HTML card banane ka function
+// ==================== 8. JSON PRODUCTS LOADER ====================
 function createProductCardHTML(product) {
     return `
         <div class="product-card">
@@ -254,6 +468,7 @@ function createProductCardHTML(product) {
 async function loadProductsFromJSON() {
     try {
         const response = await fetch('products.json');
+        if (!response.ok) return;
         const data = await response.json();
 
         for (const category in data) {
@@ -262,101 +477,19 @@ async function loadProductsFromJSON() {
                 container.innerHTML = data[category].map(item => createProductCardHTML(item)).join('');
             }
         }
-
-        setupProductModalEvents();
     } catch (error) {
-        console.error("JSON fetch karne mein error aaya:", error);
+        console.error("JSON fetch error:", error);
     }
 }
 
-function setupProductModalEvents() {
-    const modal = document.getElementById('productModal');
-    const closeBtn = document.getElementById('modalCloseBtn');
-
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('click', function (e) {
-            if (e.target.closest('.quantity') || e.target.closest('.add-cart-btn')) {
-                return;
-            }
-
-            const img = card.querySelector('.product-card-img')?.src || '';
-            const title = card.querySelector('h3')?.innerText.trim() || '';
-            const price = card.querySelector('.price')?.innerText.trim() || '';
-            const desc = card.querySelector('.description')?.innerText.trim() || '';
-
-            document.getElementById('modalImg').src = img;
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalPrice').innerText = price;
-            document.getElementById('modalDesc').innerText = desc;
-            document.getElementById('modalQtyVal').innerText = '1';
-
-            const modalRecipe = document.getElementById('modalRecipe');
-            if (typeof recipeDatabase !== 'undefined' && recipeDatabase[title]) {
-                modalRecipe.innerHTML = recipeDatabase[title];
-            } else {
-                modalRecipe.innerHTML = "<strong>Details:</strong> Handcrafted with premium ingredients and baked fresh daily.";
-            }
-
-            modal.classList.add('active');
-        });
-    });
-
-    if (closeBtn) closeBtn.addEventListener('click', () => modal.classList.remove('active'));
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.remove('active');
-        });
-    }
-}
-
+// ==================== 9. FILTER SCROLLING ====================
 window.scrollToSection = function(sectionId, buttonElement) {
-    // 1. Update active button state
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     if (buttonElement) buttonElement.classList.add('active');
 
-    // 2. Hide or show category containers
-    const allContainers = document.querySelectorAll('#menu .container, section > .container');
-
-    allContainers.forEach(container => {
-        const productDiv = container.querySelector('.products');
-        if (productDiv) {
-            if (productDiv.id === sectionId) {
-                container.style.display = 'block';
-                
-                // Increase navbarHeight to scroll less down (e.g. 140px instead of 85px)
-                const navbarHeight = 220; 
-                const targetPosition = container.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-                
-                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-            } else {
-                container.style.display = 'none';
-            }
-        }
-    });
-};
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     loadProductsFromJSON();
-
-//     // Set initial filter view (shows Popular section by default)
-//     const popularBtn = document.querySelector('.filter-btn.active') || document.querySelector('.filter-btn');
-//     if (popularBtn) {
-//         scrollToSection('popular-products', popularBtn);
-//     }
-// });
-
-
-// Category Filtering System
-window.scrollToSection = function(sectionId, buttonElement) {
-    // 1. Active button highlight update
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    if (buttonElement) buttonElement.classList.add('active');
-
-    // 2. Filter Bakery Sections ONLY (Merch ko touch nahi karega)
     const allProducts = document.querySelectorAll('.products');
 
     allProducts.forEach(productDiv => {
-        // Merch section ko filter se bilkul alag rakho (skip filtering)
         if (productDiv.id === 'merch-products' || productDiv.id === 'merch') {
             return; 
         }
@@ -370,7 +503,6 @@ window.scrollToSection = function(sectionId, buttonElement) {
         }
     });
 
-    // 3. Smooth Scrolling
     const navbarHeight = 180;
 
     if (sectionId === 'all') {
@@ -390,15 +522,10 @@ window.scrollToSection = function(sectionId, buttonElement) {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (typeof loadProductsFromJSON === 'function') {
-        loadProductsFromJSON();
-    }
+    loadProductsFromJSON();
 
     const activeBtn = document.querySelector('.filter-btn.active');
     if (activeBtn) {
         scrollToSection('all', activeBtn);
     }
 });
-
-
-

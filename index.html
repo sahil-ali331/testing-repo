@@ -96,23 +96,24 @@
 
     <section>
         <nav class="bakerz-filter-nav py-3 mt-4">
-        <div class="filter-wrapper d-flex gap-2 px-3 overflow-auto">
-            <button class="filter-btn active" onclick="scrollToSection('all', this)">All</button>
-            <button class="filter-btn active" onclick="scrollToSection('popular-products', this)">🔥 Popular</button>
-            <button class="filter-btn" onclick="scrollToSection('croissants-products', this)">Croissants</button>
-            <button class="filter-btn" onclick="scrollToSection('pastries-products', this)">Pastries</button>
-            <button class="filter-btn" onclick="scrollToSection('cookies-products', this)">Cookies</button>
-            <button class="filter-btn" onclick="scrollToSection('sweets-products', this)">Sweets</button>
-            <button class="filter-btn" onclick="scrollToSection('pies-products', this)">Pies</button>
-        </div>
-    </nav>
+            <div class="filter-wrapper d-flex gap-2 px-3 overflow-auto">
+                <button class="filter-btn active" onclick="scrollToSection('all', this)">All</button>
+                <button class="filter-btn active" onclick="scrollToSection('popular-products', this)">🔥
+                    Popular</button>
+                <button class="filter-btn" onclick="scrollToSection('croissants-products', this)">Croissants</button>
+                <button class="filter-btn" onclick="scrollToSection('pastries-products', this)">Pastries</button>
+                <button class="filter-btn" onclick="scrollToSection('cookies-products', this)">Cookies</button>
+                <button class="filter-btn" onclick="scrollToSection('sweets-products', this)">Sweets</button>
+                <button class="filter-btn" onclick="scrollToSection('pies-products', this)">Pies</button>
+            </div>
+        </nav>
     </section>
 
-    <div class="about-container">
-        <div class="about">BAKERY SELECTION</div>
+    <div class="menue-container">
+        <div class="menue">BAKERY SELECTION</div>
     </div>
 
-<section>
+    <section>
         <div class="container">
             <div class="d-flex align-items-center justify-content-between mb-4 mt-5 flex-wrap gap-2">
                 <div>
@@ -182,7 +183,7 @@
         </div>
     </section>
 
-        <section id="offers-section" class="py-5">
+    <section id="offers-section" class="py-5">
         <div class="container">
 
             <!-- Section Title & Subtitle -->
@@ -541,66 +542,26 @@
             </div>
         </div>
 
-        <section class="bb-faq-hero-container" id="testimonial">
+
+        <!-- Testimonials Section -->
+        <section id="testimonial" class="testimonial-carousel-section">
             <div class="menue-container">
                 <div class="menue">Testimonials</div>
+                <p class="text-center text-muted fs-6 mt-2">What our happy customers say about our freshly baked treats
+                </p>
             </div>
 
+            <div class="testimonial-carousel-wrapper">
+                <button class="testimonial-arrow prev-arrow" id="testimonialPrev" title="Previous">&lsaquo;</button>
 
+                <div class="testimonial-containerr" id="testimonialContainer">
+                    <!-- Dynamically populated with User Feedbacks + Dummy Data -->
+                </div>
+
+                <button class="testimonial-arrow next-arrow" id="testimonialNext" title="Next">&rsaquo;</button>
+            </div>
         </section>
 
-        <div class="testimonial-containerr">
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <h3 class="testimonial-title">"The best cake I’ve ever ordered!"</h3>
-                <p class="testimonial-text">The custom chocolate fudge cake for my birthday was unreal super moist,
-                    rich,
-                    and not overly sweet. Everyone at the party kept asking where it was from!</p>
-
-                <div class="author-container">
-                    <img src="./assets/images/rev3.jpg" alt="Sarah Khan" class="author-img">
-                    <div class="author-info">
-                        <span class="author-name">Sarah K</span>
-                        <span class="author-tag">Verified Buyer • Custom Cakes</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <h3 class="testimonial-title">"Freshly baked perfection every single morning."</h3>
-                <p class="testimonial-text">
-                    You can literally taste the quality in their sourdough and artisanal breads. Perfectly crispy on the
-                    outside, soft on the inside.
-                </p>
-
-                <div class="author-container">
-                    <img src="assets/images/rev1.jpg" alt="Sarah Khan" class="author-img">
-                    <div class="author-info">
-                        <span class="author-name">Ahmed R.</span>
-                        <span class="author-tag">Bread Enthusiast</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <h3 class="testimonial-title">"Experience a Little Bite of Heaven in Every Single Treat"</h3>
-                <p class="testimonial-text">
-                    From their macarons to their cookies, everything looks like art and tastes even better. Bakerz Bite
-                    is
-                    now my go-to for every occasion.
-                </p>
-
-                <div class="author-container">
-                    <img src="./assets/images/rev2.jpg" alt="Sarah Khan" class="author-img">
-                    <div class="author-info">
-                        <span class="author-name">Mariam T.</span>
-                        <span class="author-tag">Regular Customer</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="values">
 
@@ -816,25 +777,43 @@
                             <div class="bbcnt-inputs-flex">
                                 <div class="bbcnt-input-group">
                                     <label class="bbcnt-field-lbl">Your Name</label>
-                                    <input type="text" class="bbcnt-input-field" placeholder="Enter your name" required>
+                                    <input type="text" id="bbcntName" class="bbcnt-input-field"
+                                        placeholder="Enter your name" required>
                                 </div>
 
                                 <div class="bbcnt-input-group">
                                     <label class="bbcnt-field-lbl">Email Address</label>
-                                    <input type="email" class="bbcnt-input-field" placeholder="Enter your email"
-                                        required>
+                                    <input type="email" id="bbcntEmail" class="bbcnt-input-field"
+                                        placeholder="Enter your email" required>
                                 </div>
                             </div>
 
                             <div class="bbcnt-input-group">
                                 <label class="bbcnt-field-lbl">Subject</label>
-                                <input type="text" class="bbcnt-input-field" placeholder="e.g. Custom Cake Order"
-                                    required>
+                                <input type="text" id="bbcntSubject" class="bbcnt-input-field"
+                                    placeholder="e.g. Custom Cake Order" required>
+                            </div>
+
+                            <!-- Star Rating Input -->
+                            <div class="bbcnt-input-group">
+                                <label class="bbcnt-field-lbl">Your Rating</label>
+                                <div class="star-rating">
+                                    <input type="radio" id="star5" name="rating" value="5" required /><label for="star5"
+                                        title="5 Stars">★</label>
+                                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
+                                        title="4 Stars">★</label>
+                                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
+                                        title="3 Stars">★</label>
+                                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
+                                        title="2 Stars">★</label>
+                                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
+                                        title="1 Star">★</label>
+                                </div>
                             </div>
 
                             <div class="bbcnt-input-group">
                                 <label class="bbcnt-field-lbl">Your Message</label>
-                                <textarea class="bbcnt-input-field bbcnt-textarea-field"
+                                <textarea id="bbcntMessage" class="bbcnt-input-field bbcnt-textarea-field"
                                     placeholder="Write your message here..." required></textarea>
                             </div>
 
@@ -857,7 +836,6 @@
         </div>
     </section>
     <!-- contact us section -->
-
 
 
     <div id="productModal" class="modal-overlay">
@@ -927,7 +905,5 @@
             Loading date, time, and location...
         </div>
     </div>
-
 </body>
-
 </html>
