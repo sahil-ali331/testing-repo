@@ -309,28 +309,96 @@ function setupProductModalEvents() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadProductsFromJSON();
-});
+window.scrollToSection = function(sectionId, buttonElement) {
+    // 1. Update active button state
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (buttonElement) buttonElement.classList.add('active');
 
+    // 2. Hide or show category containers
+    const allContainers = document.querySelectorAll('#menu .container, section > .container');
 
-// filter section
-
- function scrollToSection(sectionId, buttonElement) {
-  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-  buttonElement.classList.add('active');
-  const targetSection = document.getElementById(sectionId);
-  if (targetSection) {
-    const navbarHeight = 85; 
-    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
+    allContainers.forEach(container => {
+        const productDiv = container.querySelector('.products');
+        if (productDiv) {
+            if (productDiv.id === sectionId) {
+                container.style.display = 'block';
+                
+                // Increase navbarHeight to scroll less down (e.g. 140px instead of 85px)
+                const navbarHeight = 220; 
+                const targetPosition = container.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            } else {
+                container.style.display = 'none';
+            }
+        }
     });
-  }
-}
+};
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadProductsFromJSON();
+
+//     // Set initial filter view (shows Popular section by default)
+//     const popularBtn = document.querySelector('.filter-btn.active') || document.querySelector('.filter-btn');
+//     if (popularBtn) {
+//         scrollToSection('popular-products', popularBtn);
+//     }
+// });
 
 
+// Category Filtering System
+window.scrollToSection = function(sectionId, buttonElement) {
+    // 1. Active button highlight update
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (buttonElement) buttonElement.classList.add('active');
+
+    // 2. Filter Bakery Sections ONLY (Merch ko touch nahi karega)
+    const allProducts = document.querySelectorAll('.products');
+
+    allProducts.forEach(productDiv => {
+        // Merch section ko filter se bilkul alag rakho (skip filtering)
+        if (productDiv.id === 'merch-products' || productDiv.id === 'merch') {
+            return; 
+        }
+
+        const container = productDiv.closest('.container') || productDiv;
+
+        if (sectionId === 'all' || productDiv.id === sectionId) {
+            container.style.display = 'block';
+        } else {
+            container.style.display = 'none';
+        }
+    });
+
+    // 3. Smooth Scrolling
+    const navbarHeight = 180;
+
+    if (sectionId === 'all') {
+        const firstContainer = document.querySelector('.products:not(#merch-products)')?.closest('.container');
+        if (firstContainer) {
+            const targetPosition = firstContainer.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+    } else {
+        const targetEl = document.getElementById(sectionId);
+        if (targetEl) {
+            const targetContainer = targetEl.closest('.container') || targetEl;
+            const targetPosition = targetContainer.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof loadProductsFromJSON === 'function') {
+        loadProductsFromJSON();
+    }
+
+    const activeBtn = document.querySelector('.filter-btn.active');
+    if (activeBtn) {
+        scrollToSection('all', activeBtn);
+    }
+});
 
 
 

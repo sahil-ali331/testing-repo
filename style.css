@@ -10,7 +10,7 @@ body {
   background-color: #faf6f0;
 }
 
-.iggmg {
+.iggmg {  
   background-size: cover;
   object-fit: cover;
   width: 100%;
@@ -1657,9 +1657,6 @@ header .container {
     font-size: 0.85rem;
   }
 }
-
-
-
 .add-to-cart {
   background-color: #ffe6a7;
   height: 2.5rem;
@@ -1667,7 +1664,7 @@ header .container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
   font-weight: 400;
   font-style: italic;
   color: #351b18;
@@ -2260,6 +2257,4 @@ header .container {
   .sitemap-links {
     grid-template-columns: 1fr;
   }
-
-
 }
