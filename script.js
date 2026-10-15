@@ -52,13 +52,13 @@ const defaultTestimonials = [
 
 // Helper to sanitize HTML input
 function escapeHTML(str) {
-    return (str || '').replace(/[&<>'"]/g, 
+    return (str || '').replace(/[&<>'"]/g,
         tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
     );
 }
 
 // Function to render testimonials (User feedbacks FIRST, Dummy Data END)
-window.renderTestimonials = function() {
+window.renderTestimonials = function () {
     const container = document.getElementById('testimonialContainer');
     if (!container) return;
 
@@ -113,7 +113,7 @@ window.renderTestimonials = function() {
 };
 
 // Global Delete Function for User Feedbacks
-window.deleteFeedback = function(id) {
+window.deleteFeedback = function (id) {
     if (confirm("Are you sure you want to delete this feedback response?")) {
         try {
             let feedbacks = JSON.parse(localStorage.getItem('bakerz_feedbacks')) || [];
@@ -483,7 +483,7 @@ async function loadProductsFromJSON() {
 }
 
 // ==================== 9. FILTER SCROLLING ====================
-window.scrollToSection = function(sectionId, buttonElement) {
+window.scrollToSection = function (sectionId, buttonElement) {
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     if (buttonElement) buttonElement.classList.add('active');
 
@@ -491,7 +491,7 @@ window.scrollToSection = function(sectionId, buttonElement) {
 
     allProducts.forEach(productDiv => {
         if (productDiv.id === 'merch-products' || productDiv.id === 'merch') {
-            return; 
+            return;
         }
 
         const container = productDiv.closest('.container') || productDiv;
@@ -529,3 +529,46 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollToSection('all', activeBtn);
     }
 });
+
+const topBtn = document.getElementById("topBtn");
+
+if (topBtn) {
+    topBtn.style.display = "none";
+
+    window.addEventListener("scroll", () => {
+        topBtn.style.display = window.scrollY > 500
+            ? "block"
+            : "none";
+    });
+
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+
+function updateActiveNavigation() {
+    const sections = document.querySelectorAll("section[id]");
+    const links = document.querySelectorAll("#nav-links a");
+
+    let current = "";
+
+    sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 180) {
+            current = section.id;
+        }
+    });
+
+    links.forEach(link => {
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + current
+        );
+    });
+}
+
+window.addEventListener("scroll", updateActiveNavigation);
+updateActiveNavigation();
